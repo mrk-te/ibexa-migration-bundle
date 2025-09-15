@@ -30,7 +30,7 @@ class MigrateTest extends MigrationExecutingTest
 
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath), '-n' => true, '-u' => true));
         // check that there are no notes related to adding the migration before execution
-        $this->assertRegexp('?\| ' . basename($filePath) . ' +\| +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath) . ' +\| +\|?', $output);
 
         // simplistic check on the event listeners having fired off correctly
         $this->assertGreaterThanOrEqual($count1 + 1, BeforeStepExecutionListener::getExecutions(), "Migration 'before step' listener did not fire");
@@ -54,7 +54,7 @@ class MigrateTest extends MigrationExecutingTest
 
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath), '-n' => true, '-u' => true));
         // check that the mig has been skipped
-        $this->assertRegexp('?Skipping ' . basename($filePath) . '?', $output);
+        $this->assertMatchesRegularExpression('?Skipping ' . basename($filePath) . '?', $output);
 
         $this->deleteMigration($filePath);
     }
@@ -77,7 +77,7 @@ class MigrateTest extends MigrationExecutingTest
         $output = $this->fetchOutput();
         $this->assertNotEquals(0, $exitCode, 'CLI Command should have failed. Output: ' . $output);
         // check that the mig failed
-        $this->assertRegexp('?Migration failed!?', $output);
+        $this->assertMatchesRegularExpression('?Migration failed!?', $output);
 
         $this->deleteMigration($filePath);
     }
@@ -257,18 +257,18 @@ class MigrateTest extends MigrationExecutingTest
         // check that the output contains the expected output, in quiet mode/verbose/very_verbose modes
         /// @todo fix usage of output buffering and stream handlers to allow matching the reference dump
         if (array_key_exists('-q', $options)) {
-            //$this->assertNotRegExp('/"hello world"/', $output, 'Migration output unexpected');
-            $this->assertNotRegExp('/Time taken:/', $output, 'Migration output unexpected');
+            //$this->assertDoesNotMatchRegularExpression('/"hello world"/', $output, 'Migration output unexpected');
+            $this->assertDoesNotMatchRegularExpression('/Time taken:/', $output, 'Migration output unexpected');
         } else if (array_key_exists('-v', $options)) {
-            //$this->assertRegExp('/"hello world"/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/migration step.+has been executed/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/Time taken:/', $output, 'Migration output unexpected');
+            //$this->assertMatchesRegularExpression('/"hello world"/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/migration step.+has been executed/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/Time taken:/', $output, 'Migration output unexpected');
         } else if (array_key_exists('-vv', $options)) {
-            //$this->assertRegExp('/"hello world"/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/migration step.+will be executed/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/migration step.+has been executed/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/memory delta:/', $output, 'Migration output unexpected');
-            $this->assertRegExp('/Time taken:/', $output, 'Migration output unexpected');
+            //$this->assertMatchesRegularExpression('/"hello world"/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/migration step.+will be executed/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/migration step.+has been executed/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/memory delta:/', $output, 'Migration output unexpected');
+            $this->assertMatchesRegularExpression('/Time taken:/', $output, 'Migration output unexpected');
         }
 
         /// @todo add some assertion on the output of `--info`: move to a separate test
