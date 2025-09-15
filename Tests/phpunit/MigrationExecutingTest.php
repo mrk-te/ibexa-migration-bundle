@@ -30,7 +30,7 @@ abstract class MigrationExecutingTest extends CommandExecutingTest
             '-n' => true,
         ]);
 
-        $this->assertRegexp('?Added migration?', $output);
+        $this->assertMatchesRegularExpression('?Added migration?', $output);
 
         return $output;
     }
@@ -78,7 +78,7 @@ abstract class MigrationExecutingTest extends CommandExecutingTest
             $checkExitCode
         );
 
-        $this->assertRegexp('?Processing ' . preg_quote(basename($filePath), '?') . '?', $output);
+        $this->assertMatchesRegularExpression('?Processing ' . preg_quote(basename($filePath), '?') . '?', $output);
 
         $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
         $m = $ms->getMigration(basename($filePath));

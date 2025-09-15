@@ -29,7 +29,7 @@ class MatrixTest extends MigrationExecutingTest
 
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath), '-n' => true, '-u' => true));
         // check that there are no notes after adding the migration
-        $this->assertRegexp('?\| ' . basename($filePath) . ' +\| +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath) . ' +\| +\|?', $output);
 
         // simplistic check on the event listeners having fired off correctly
         $this->assertGreaterThanOrEqual($count1 + 1, BeforeStepExecutionListener::getExecutions(), "Migration 'before step' listener did not fire");
