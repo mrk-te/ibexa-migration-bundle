@@ -41,7 +41,7 @@
         "symfony/var-dumper": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.5.12"
+        "phpunit/phpunit": "^9.6"
     },
     "conflict": {
         "kaliop/ezmigrationbundle": "*",
