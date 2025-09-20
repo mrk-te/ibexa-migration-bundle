@@ -4,18 +4,18 @@
     content_type_group: 1
     identifier: kmb_test_24_type
     name: Kaliop Migration Bundle Test Class 24
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            identifier: ibexa_string
 -
     type: content
     mode: create
     content_type: kmb_test_24_type
     parent_location: 2
     attributes:
-        - ezstring: hello world again
+        - ibexa_string: hello world again
     references:
         -
             identifier: kmb_test_24_content
@@ -26,14 +26,14 @@
     match:
         content_id: reference:kmb_test_24_content
     attributes:
-        - ezstring: hello world 2
+        - ibexa_string: hello world 2
 -
     type: content
     mode: update
     match:
         content_id: reference:kmb_test_24_content
     attributes:
-        - ezstring: hello world 3
+        - ibexa_string: hello world 3
 -
     type: content
     mode: load

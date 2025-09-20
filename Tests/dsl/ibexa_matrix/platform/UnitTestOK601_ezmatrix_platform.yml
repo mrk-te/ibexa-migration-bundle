@@ -9,12 +9,12 @@
     is_container: false
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             required: true
         -
-            type: ezmatrix
+            type: ibexa_matrix
             name: Bibliography
             identifier: bibliography
 
@@ -78,12 +78,12 @@
     is_container: false
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             required: true
         -
-            type: ezmatrix
+            type: ibexa_matrix
             name: Bibliography
             identifier: bibliography
             field-settings:

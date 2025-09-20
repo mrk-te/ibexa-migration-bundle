@@ -7,12 +7,12 @@
     content_type_group: 1
     identifier: kmb_test_9k
     name: Kaliop Migration Bundle Test Class 9
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
     references:
         -
             identifier: kmb_test_9k
@@ -25,4 +25,4 @@
     parent_location: 2
     lang: fre-IT
     attributes:
-        - ezstring: hello world
+        - ibexa_string: hello world

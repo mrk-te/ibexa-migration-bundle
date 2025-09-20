@@ -4,13 +4,13 @@
     content_type_group: 1
     identifier: kmb_test_026
     name: Kaliop Migration Bundle Test Class 26
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     is_container: true
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
 
 -
     type: content_type
@@ -18,13 +18,13 @@
     content_type_group: 1
     identifier: kmb_test_026_2
     name: Kaliop Migration Bundle Test Class 26-2
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     is_container: true
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
     references:
         -
             identifier: kmb_test_026_2_ctid
@@ -35,7 +35,7 @@
     content_type: kmb_test_026
     parent_location: 2
     attributes:
-        - ezstring: hello world 1
+        - ibexa_string: hello world 1
     references:
         -
             identifier: kmb_test_026_1_loc
@@ -47,7 +47,7 @@
     content_type: kmb_test_026_2
     parent_location: reference:kmb_test_026_1_loc
     attributes:
-        - ezstring: hello world 2
+        - ibexa_string: hello world 2
     references:
         -
             identifier: kmb_test_026_2_loc
@@ -62,7 +62,7 @@
     content_type: kmb_test_026
     parent_location: reference:kmb_test_026_2_loc
     attributes:
-        - ezstring: hello world 3
+        - ibexa_string: hello world 3
     references:
         -
             identifier: kmb_test_026_3_loc

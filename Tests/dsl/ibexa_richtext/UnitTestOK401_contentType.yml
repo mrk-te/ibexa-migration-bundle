@@ -14,7 +14,7 @@
     default_sort_order: asc
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             description: Title

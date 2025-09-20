@@ -103,20 +103,20 @@ parameters:
     ibexa_migration_bundle.user_group_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UserGroupMatcher
 
     ibexa_migration_bundle.complex_field_manager.class: Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager
-    ibexa_migration_bundle.complex_field.ezauthor.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzAuthor
-    ibexa_migration_bundle.complex_field.ezbinaryfile.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBinaryFile
-    ibexa_migration_bundle.complex_field.ezboolean.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBoolean
+    ibexa_migration_bundle.complex_field.ibexa_author.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzAuthor
+    ibexa_migration_bundle.complex_field.ibexa_binaryfile.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBinaryFile
+    ibexa_migration_bundle.complex_field.ibexa_boolean.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBoolean
     ibexa_migration_bundle.complex_field.country.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzCountry
-    ibexa_migration_bundle.complex_field.ezdate.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDate
-    ibexa_migration_bundle.complex_field.ezdatetime.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDateAndTime
-    ibexa_migration_bundle.complex_field.ezimage.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzImage
-    ibexa_migration_bundle.complex_field.ezmatrix.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMatrix
-    ibexa_migration_bundle.complex_field.ezmedia.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMedia
+    ibexa_migration_bundle.complex_field.ibexa_date.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDate
+    ibexa_migration_bundle.complex_field.ibexa_datetime.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDateAndTime
+    ibexa_migration_bundle.complex_field.ibexa_image.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzImage
+    ibexa_migration_bundle.complex_field.ibexa_matrix.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMatrix
+    ibexa_migration_bundle.complex_field.ibexa_media.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMedia
     #ibexa_migration_bundle.complex_field.ezpage.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzPage
     ibexa_migration_bundle.complex_field.ezrelation.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelation
     ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelationList
-    ibexa_migration_bundle.complex_field.ezrichtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRichText
-    ibexa_migration_bundle.complex_field.ezselection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzSelection
+    ibexa_migration_bundle.complex_field.ibexa_richtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRichText
+    ibexa_migration_bundle.complex_field.ibexa_selection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzSelection
     ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzXmlText
     ibexa_migration_bundle.complex_field.eztags.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzTags
 
@@ -657,77 +657,77 @@ services:
     # NB: you can register handlers for either a field type, using the  'fieldtype' attribute, or for the
     #     field type of a specific content type by using both 'fieldtype' and 'contenttype' in the tag definition
 
-    ibexa_migration_bundle.complex_field.ezauthor:
+    ibexa_migration_bundle.complex_field.ibexa_author:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezauthor.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_author.class%'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezauthor, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_author, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezbinaryfile:
+    ibexa_migration_bundle.complex_field.ibexa_binaryfile:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezbinaryfile.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_binaryfile.class%'
         arguments:
             - "$io.root_dir$"
             - "@?ibexa.core.io.default_url_decorator"
-            - "@?ibexa.field_type.ezbinaryfile.io_service"
+            - "@?ibexa.field_type.ibexa_binaryfile.io_service"
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezbinaryfile, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_binaryfile, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezboolean:
+    ibexa_migration_bundle.complex_field.ibexa_boolean:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezboolean.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_boolean.class%'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezboolean, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_boolean, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezcountry:
+    ibexa_migration_bundle.complex_field.ibexa_country:
         parent: ibexa_migration_bundle.complex_field
         class: '%ibexa_migration_bundle.complex_field.country.class%'
         arguments:
             - '@ibexa.api.service.content_type'
             - '@ibexa.api.service.field_type'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezcountry, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_country, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezdate:
+    ibexa_migration_bundle.complex_field.ibexa_date:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezdate.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_date.class%'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezdate, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_date, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezdatetime:
+    ibexa_migration_bundle.complex_field.ibexa_datetime:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezdatetime.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_datetime.class%'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezdatetime, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_datetime, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezimage:
+    ibexa_migration_bundle.complex_field.ibexa_image:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezimage.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_image.class%'
         arguments:
             - "$io.root_dir$"
             - "@?ibexa.core.io.default_url_decorator"
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezimage, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_image, priority: 0 }
 
 
-    ibexa_migration_bundle.complex_field.ezmatrix:
+    ibexa_migration_bundle.complex_field.ibexa_matrix:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezmatrix.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_matrix.class%'
         #arguments:
         #    - "$io.root_dir$"
         #    - "@?ibexa.core.io.default_url_decorator"
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezmatrix, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_matrix, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezmedia:
+    ibexa_migration_bundle.complex_field.ibexa_media:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezmedia.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_media.class%'
         arguments:
             - "$io.root_dir$"
             - "@?ibexa.core.io.default_url_decorator"
-            - "@?ibexa.field_type.ezbinaryfile.io_service"
+            - "@?ibexa.field_type.ibexa_binaryfile.io_service"
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezmedia, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_media, priority: 0 }
 
     #ibexa_migration_bundle.complex_field.ezpage:
     #    lazy: true
@@ -744,7 +744,7 @@ services:
         arguments:
             - '@ibexa_migration_bundle.content_matcher'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezobjectrelation, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_object_relation, priority: 0 }
 
     ibexa_migration_bundle.complex_field.ezrelationlist:
         parent: ibexa_migration_bundle.complex_field
@@ -752,25 +752,25 @@ services:
         arguments:
             - '@ibexa_migration_bundle.content_matcher'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezobjectrelationlist, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_object_relation_list, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezrichtext:
+    ibexa_migration_bundle.complex_field.ibexa_richtext:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezrichtext.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_richtext.class%'
         arguments:
             # if you want to replace custom references in rich text fields, you can replace this with a new service
             # built f.e. using the ChainPrefixResolver class
             - '@ibexa_migration_bundle.reference_resolver.customreference'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezrichtext, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_richtext, priority: 0 }
 
-    ibexa_migration_bundle.complex_field.ezselection:
+    ibexa_migration_bundle.complex_field.ibexa_selection:
         parent: ibexa_migration_bundle.complex_field
-        class: '%ibexa_migration_bundle.complex_field.ezselection.class%'
+        class: '%ibexa_migration_bundle.complex_field.ibexa_selection.class%'
         arguments:
             - '@ibexa.api.repository'
         tags:
-            - { name: ibexa_migration_bundle.complex_field, fieldtype: ezselection, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_selection, priority: 0 }
 
     ibexa_migration_bundle.complex_field.ezxmltext:
         parent: ibexa_migration_bundle.complex_field

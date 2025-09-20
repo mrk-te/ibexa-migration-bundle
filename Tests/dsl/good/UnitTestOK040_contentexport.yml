@@ -11,21 +11,21 @@
     attributes:
         -
             identifier: name
-            type: ezstring
+            type: ibexa_string
             name: name
         -
-            identifier: ezbinaryfile
-            type: ezbinaryfile
-            name: ezbinaryfile
+            identifier: ibexa_binaryfile
+            type: ibexa_binaryfile
+            name: ibexa_binaryfile
         -
-            identifier: ezimage
-            type: ezimage
-            name: ezimage
+            identifier: ibexa_image
+            type: ibexa_image
+            name: ibexa_image
             is-thumbnail: true
         -
-            identifier: ezmedia
-            type: ezmedia
-            name: ezmedia
+            identifier: ibexa_media
+            type: ibexa_media
+            name: ibexa_media
 
 -
     type: migration_definition
@@ -93,14 +93,14 @@
     parent_location: 2
     attributes:
         name: hello world
-        ezimage:
+        ibexa_image:
               path: blank.jpg
               alt_text: a blank 1x1 px image
               filename: lol1.jpg
-        ezbinaryfile:
+        ibexa_binaryfile:
               path: emptyfile.txt
               filename: lol2.txt
-        ezmedia:
+        ibexa_media:
               path: small.flv
               filename: lol3.flv
     references:
@@ -120,13 +120,13 @@
     references:
         -
             identifier: kmb_040_filepath_1
-            attribute: '[0].attributes.ezbinaryfile.path'
+            attribute: '[0].attributes.ibexa_binaryfile.path'
         -
             identifier: kmb_040_filepath_2
-            attribute: '[0].attributes.ezimage.path'
+            attribute: '[0].attributes.ibexa_image.path'
         -
             identifier: kmb_040_filepath_3
-            attribute: '[0].attributes.ezmedia.path'
+            attribute: '[0].attributes.ibexa_media.path'
 
 -
     type: file

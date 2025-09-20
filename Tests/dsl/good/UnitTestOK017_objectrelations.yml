@@ -10,13 +10,13 @@
     name_pattern: '<title>'
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: title
             identifier: title
         -
-            type: ezobjectrelationlist
-            name: ezobjectrelationlist
-            identifier: ezobjectrelationlist
+            type: ibexa_object_relation_list
+            name: ibexa_object_relation_list
+            identifier: ibexa_object_relation_list
 
 -
     type: content
@@ -25,7 +25,7 @@
     parent_location: 2
     attributes:
         title: test object
-        ezobjectrelationlist: [ 49 ]
+        ibexa_object_relation_list: [ 49 ]
     references:
         -
             identifier: hello
@@ -37,7 +37,7 @@
     match:
         content_id: reference:hello
     attributes:
-        ezobjectrelationlist: [ 41 ]
+        ibexa_object_relation_list: [ 41 ]
 
 -
     type: content
@@ -47,10 +47,10 @@
     references:
         -
             identifier: dear
-            attribute: 'attributes.ezobjectrelationlist.destinationContentIds[0]'
+            attribute: 'attributes.ibexa_object_relation_list.destinationContentIds[0]'
         -
             identifier: world
-            attribute: 'attributes.ezobjectrelationlist.destinationContentIds.length(@)'
+            attribute: 'attributes.ibexa_object_relation_list.destinationContentIds.length(@)'
 
 -
     type: assert

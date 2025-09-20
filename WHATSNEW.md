@@ -1,6 +1,7 @@
 Version: 2.0.0
 ==============
 
+* Changed: Rename field types `ez*` to `ibexa_*`
 * Changed: Rename `eZMigrationExtension` to `IbexaMigrationExtension`
 * Changed: Rename `eZMigrationBundle` to `IbexaMigrationBundle`
 * Changed: Rename all elements prefixed with `ez_migration*` to `ibexa_migration*`

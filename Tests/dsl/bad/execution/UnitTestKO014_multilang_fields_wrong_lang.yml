@@ -7,12 +7,12 @@
     content_type_group: 1
     identifier: kmb_test_14
     name: Kaliop Migration Bundle Test Class 14
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
 
 -
     type: language
@@ -26,7 +26,7 @@
     content_type: kmb_test_14
     parent_location: 2
     attributes:
-        ezstring:
+        ibexa_string:
             abc-TA: hello world 4 abc-TA
             non-EXIST: hello world 4 non existing language
 

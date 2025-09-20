@@ -1,8 +1,8 @@
-# This sample migration shows how to create a content with an ezimage field with the image being a copy of the ezimage
+# This sample migration shows how to create a content with an ibexa_image field with the image being a copy of the ibexa_image
 # field of another content, when the CMS is set up in cluster mode.
 
-# 1. load the old content with the ezimage field and set a reference to the path of the image's original file.
-#    In this case the name of the ezimage field is 'image'
+# 1. load the old content with the ibexa_image field and set a reference to the path of the image's original file.
+#    In this case the name of the ibexa_image field is 'image'
 -
     type: content
     mode: load
@@ -31,7 +31,7 @@
 #    label: 'absolute path of image file: '
 
 # 4. create the new content.
-#    In this case, the content class is called 'image', and its ezimage field is also called 'image'
+#    In this case, the content class is called 'image', and its ibexa_image field is also called 'image'
 -
     type: content
     mode: create
