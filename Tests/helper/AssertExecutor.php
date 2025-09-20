@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
-use Kaliop\eZMigrationBundle\Core\Executor\AbstractExecutor;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\Core\Executor\AbstractExecutor;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
 
 class AssertExecutor extends AbstractExecutor
 {

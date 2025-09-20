@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Section;
-use Kaliop\eZMigrationBundle\API\Collection\SectionCollection;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher;
+use Kaliop\IbexaMigrationBundle\API\Collection\SectionCollection;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher;
 
 /**
  * Handles section migrations.

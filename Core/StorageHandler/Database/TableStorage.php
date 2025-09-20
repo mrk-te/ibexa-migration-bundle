@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\StorageHandler\Database;
+namespace Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Exception as QueryException;
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
 
 abstract class TableStorage
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\TagMatcher;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\TagMatcher;
 
 class EzTags extends AbstractFieldHandler implements FieldValueImporterInterface
 {

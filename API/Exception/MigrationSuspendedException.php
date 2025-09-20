@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Exception;
+namespace Kaliop\IbexaMigrationBundle\API\Exception;
 
 /**
  * Throw this exception in any step to suspend the migration

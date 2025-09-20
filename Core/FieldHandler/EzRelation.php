@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\Relation\Value;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\API\FieldDefinitionConverterInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
 class EzRelation extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
 {

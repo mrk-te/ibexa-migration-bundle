@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\Core\Matcher\UrlWildcardMatcher;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\UrlWildcardMatcher;
 
 class UrlWildcardManager extends RepositoryExecutor
 {

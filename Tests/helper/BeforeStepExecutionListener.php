@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
-use Kaliop\eZMigrationBundle\API\Event\BeforeStepExecutionEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\BeforeStepExecutionEvent;
 
 class BeforeStepExecutionListener
 {

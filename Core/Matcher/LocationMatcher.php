@@ -1,16 +1,16 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\InvalidArgumentException;
 use Ibexa\Contracts\Core\Repository\Values\Content\Query;
 use Ibexa\Contracts\Core\Repository\Values\Content\LocationQuery;
 use Ibexa\Contracts\Core\Repository\Values\Content\Location;
-use Kaliop\eZMigrationBundle\API\Collection\LocationCollection;
-use Kaliop\eZMigrationBundle\API\SortingMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidSortConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Collection\LocationCollection;
+use Kaliop\IbexaMigrationBundle\API\SortingMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidSortConditionsException;
 
 class LocationMatcher extends QueryBasedMatcher implements SortingMatcherInterface
 {

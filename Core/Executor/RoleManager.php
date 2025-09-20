@@ -1,19 +1,19 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\User\Limitation;
 use Ibexa\Contracts\Core\Repository\Values\User\Role;
 use Ibexa\Contracts\Core\Repository\Values\User\RoleDraft;
 use Ibexa\Contracts\Core\Repository\RoleService;
 use Ibexa\Contracts\Core\Repository\UserService;
-use Kaliop\eZMigrationBundle\API\Collection\RoleCollection;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\Core\Helper\LimitationConverter;
-use Kaliop\eZMigrationBundle\Core\Matcher\RoleMatcher;
+use Kaliop\IbexaMigrationBundle\API\Collection\RoleCollection;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\Core\Helper\LimitationConverter;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\RoleMatcher;
 
 /**
  * Handles role migrations.

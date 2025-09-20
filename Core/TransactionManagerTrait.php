@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
 use Doctrine\DBAL\Connection;
 use Ibexa\Contracts\Core\Repository\Repository;

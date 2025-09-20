@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Helper;
+namespace Kaliop\IbexaMigrationBundle\Core\Helper;
 
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 

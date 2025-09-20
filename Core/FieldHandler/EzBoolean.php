@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\Checkbox\Value as CheckboxValue;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 
 class EzBoolean extends AbstractFieldHandler implements FieldValueImporterInterface
 {

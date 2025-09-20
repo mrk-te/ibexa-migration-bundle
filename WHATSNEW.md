@@ -1,5 +1,7 @@
 Version: 2.0.0
 ==============
+
+* Changed: Rename `eZMigrationBundle` to `IbexaMigrationBundle`
 * Changed: Rename all elements prefixed with `ez_migration*` to `ibexa_migration*`
 * Added: Support for Ibexa 5.0 / Symfony 7
 * Removed: Operation `type: mail / mode: send` and dependency to SwiftMailer. Use `type: service / mode: call` instead.

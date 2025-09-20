@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Query;
-use Kaliop\eZMigrationBundle\API\Collection\TrashedItemCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Collection\TrashedItemCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 
 /// q: is it better to extend Content or Location Matcher ?
 class TrashMatcher extends ContentMatcher

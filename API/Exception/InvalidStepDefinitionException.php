@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Exception;
+namespace Kaliop\IbexaMigrationBundle\API\Exception;
 
 /**
  * To be used when a migration step definition is intrinsically invalid (as opposed to step definitions that are

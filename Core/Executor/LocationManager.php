@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Location;
-use Kaliop\eZMigrationBundle\API\Collection\ContentCollection;
-use Kaliop\eZMigrationBundle\API\Collection\LocationCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\LocationMatcher;
-use Kaliop\eZMigrationBundle\Core\Helper\SortConverter;
+use Kaliop\IbexaMigrationBundle\API\Collection\ContentCollection;
+use Kaliop\IbexaMigrationBundle\API\Collection\LocationCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\LocationMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter;
 
 /**
  * Handles location migrations.

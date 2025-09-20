@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\FieldDefinitionConverterInterface;
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
 /**
  * @todo make fieldSettings independent from version of ezmatrix in use, by converting them from a common format

@@ -1,4 +1,4 @@
-eZMigrationBundle2 deprecations and backwards compatibility breaks
+IbexaMigrationBundle2 deprecations and backwards compatibility breaks
 ==================================================================
 
 Upgrade notes for developers coming from an ezmgrationbundle installation.

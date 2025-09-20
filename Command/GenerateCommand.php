@@ -1,13 +1,13 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\API\MatcherInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Event\MigrationGeneratedEvent;
-use Kaliop\eZMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\API\MatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationGeneratedEvent;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -34,7 +34,7 @@ class GenerateCommand extends AbstractCommand
     private $availableMigrationFormats = array('yml', 'php', 'sql', 'json');
     private $availableModes = array('create', 'update', 'delete');
     private $availableTypes = array('content', 'content_type', 'content_type_group', 'language', 'object_state', 'object_state_group', 'role', 'section', 'generic', 'db', 'php', '...');
-    private $thisBundle = 'eZMigrationBundle';
+    private $thisBundle = 'IbexaMigrationBundle';
 
     protected $eventName = 'ibexa_migration.migration_generated';
     protected $eventDispatcher;

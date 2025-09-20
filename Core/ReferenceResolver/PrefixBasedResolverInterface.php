@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
 /**
  * At the moment this interface does nothing more than its parent.

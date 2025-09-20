@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\Core\Matcher\TagMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\TagMatcher;
 
 /**
  * Handles references to tags

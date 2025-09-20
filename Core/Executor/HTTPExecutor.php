@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

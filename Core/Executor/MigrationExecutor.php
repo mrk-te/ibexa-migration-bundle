@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationSuspendedException;
-use Kaliop\eZMigrationBundle\API\ExecutorInterface;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationSuspendedException;
+use Kaliop\IbexaMigrationBundle\API\ExecutorInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 class MigrationExecutor extends AbstractExecutor
 {

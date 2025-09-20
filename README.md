@@ -267,7 +267,7 @@ In order to act on those events, you will need to declare tagged services, such 
 
 and the corresponding php class:
 
-    use Kaliop\eZMigrationBundle\API\Event\StepExecutedEvent;
+    use Kaliop\IbexaMigrationBundle\API\Event\StepExecutedEvent;
 
     class StepExecutedListener
     {

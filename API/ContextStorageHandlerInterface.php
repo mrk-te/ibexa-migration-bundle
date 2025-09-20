@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 /**
  * Implemented by classes which store details of the executing migrations contexts

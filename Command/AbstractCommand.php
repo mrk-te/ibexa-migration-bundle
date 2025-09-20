@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;

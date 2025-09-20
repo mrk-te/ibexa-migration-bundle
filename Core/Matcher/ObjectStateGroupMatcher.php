@@ -1,13 +1,13 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException;
 use Ibexa\Contracts\Core\Repository\Values\ObjectState\ObjectStateGroup;
 use Ibexa\Core\Base\Exceptions\NotFoundException as CoreNotFoundException;
-use Kaliop\eZMigrationBundle\API\Collection\ObjectStateGroupCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\KeyMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Collection\ObjectStateGroupCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\KeyMatcherInterface;
 
 class ObjectStateGroupMatcher extends RepositoryMatcher implements KeyMatcherInterface
 {

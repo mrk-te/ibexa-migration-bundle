@@ -1,16 +1,16 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\DefinitionParser;
+namespace Kaliop\IbexaMigrationBundle\Core\DefinitionParser;
 
-use Kaliop\eZMigrationBundle\API\DefinitionParserInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\DefinitionParserInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 use PhpParser\Error;
 use PhpParser\ParserFactory;
 
 class PHPDefinitionParser implements DefinitionParserInterface
 {
-    protected $mandatoryInterface = 'Kaliop\eZMigrationBundle\API\MigrationInterface';
+    protected $mandatoryInterface = 'Kaliop\IbexaMigrationBundle\API\MigrationInterface';
 
     /**
      * Tells whether the given file can be handled by this handler, by checking e.g. the suffix

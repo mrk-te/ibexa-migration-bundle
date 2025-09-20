@@ -1,17 +1,17 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\InvalidArgumentException;
 use Ibexa\Contracts\Core\Repository\Exceptions\NotImplementedException;
 use Ibexa\Contracts\Core\Repository\Exceptions\UnauthorizedException;
 use Ibexa\Contracts\Core\Repository\Values\Content\Content;
 use Ibexa\Contracts\Core\Repository\Values\Content\Query;
-use Kaliop\eZMigrationBundle\API\Collection\ContentCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidSortConditionsException;
-use Kaliop\eZMigrationBundle\API\SortingMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Collection\ContentCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidSortConditionsException;
+use Kaliop\IbexaMigrationBundle\API\SortingMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
 
 class ContentMatcher extends QueryBasedMatcher implements SortingMatcherInterface
 {

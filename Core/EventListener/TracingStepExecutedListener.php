@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\EventListener;
+namespace Kaliop\IbexaMigrationBundle\Core\EventListener;
 
-use Kaliop\eZMigrationBundle\API\Event\BeforeStepExecutionEvent;
-use Kaliop\eZMigrationBundle\API\Event\StepExecutedEvent;
-use Kaliop\eZMigrationBundle\API\Event\MigrationAbortedEvent;
-use Kaliop\eZMigrationBundle\API\Event\MigrationSuspendedEvent;
-use Kaliop\eZMigrationBundle\API\Collection\AbstractCollection;
+use Kaliop\IbexaMigrationBundle\API\Event\BeforeStepExecutionEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\StepExecutedEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationAbortedEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationSuspendedEvent;
+use Kaliop\IbexaMigrationBundle\API\Collection\AbstractCollection;
 
 use Symfony\Component\Console\Output\OutputInterface;
 

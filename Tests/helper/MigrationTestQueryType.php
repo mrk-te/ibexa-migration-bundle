@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\LocationQuery;
 use Ibexa\Core\QueryType\QueryType;

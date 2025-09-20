@@ -1,13 +1,13 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException;
 use Ibexa\Contracts\Core\Repository\Exceptions\UnauthorizedException;
 use Ibexa\Contracts\Core\Repository\Values\User\Role;
-use Kaliop\eZMigrationBundle\API\Collection\RoleCollection;
-use Kaliop\eZMigrationBundle\API\KeyMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Collection\RoleCollection;
+use Kaliop\IbexaMigrationBundle\API\KeyMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 
 class RoleMatcher extends RepositoryMatcher implements KeyMatcherInterface
 {

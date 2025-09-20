@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Collection\AbstractCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Collection\AbstractCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 /**
  * A trait used by Executors which allow to set non-scalar values to references.

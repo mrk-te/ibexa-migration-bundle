@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Helper;
+namespace Kaliop\IbexaMigrationBundle\Core\Helper;
 
 use Ibexa\Contracts\Core\Repository\Values\User\Limitation;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\Core\Matcher\LocationMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentTypeMatcher;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\LocationMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentTypeMatcher;
 
 class LimitationConverter
 {

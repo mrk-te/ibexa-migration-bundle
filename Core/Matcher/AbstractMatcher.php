@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\MatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\MatcherInterface;
 
 abstract class AbstractMatcher implements MatcherInterface, EnumerableMatcherInterface
 {
@@ -138,7 +138,7 @@ abstract class AbstractMatcher implements MatcherInterface, EnumerableMatcherInt
      * @param array $conditions
      * @param bool $tolerateMisses
      * @return array|\ArrayObject the keys must be a unique identifier of the matched entities
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException
      */
     abstract public function match(array $conditions);
 }

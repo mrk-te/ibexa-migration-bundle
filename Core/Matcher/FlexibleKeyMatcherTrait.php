@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 trait FlexibleKeyMatcherTrait
 {

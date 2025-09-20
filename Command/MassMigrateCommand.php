@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\Exception\AfterMigrationExecutionException;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\Core\EventListener\TracingStepExecutedListener;
-use Kaliop\eZMigrationBundle\Core\Helper\ProcessManager;
-use Kaliop\eZMigrationBundle\Core\Loader\FilesystemRecursive;
-use Kaliop\eZMigrationBundle\Core\MigrationService;
-use Kaliop\eZMigrationBundle\Core\Process\Process;
+use Kaliop\IbexaMigrationBundle\API\Exception\AfterMigrationExecutionException;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\Core\EventListener\TracingStepExecutedListener;
+use Kaliop\IbexaMigrationBundle\Core\Helper\ProcessManager;
+use Kaliop\IbexaMigrationBundle\Core\Loader\FilesystemRecursive;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\Core\Process\Process;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\ArrayInput;

@@ -1,19 +1,19 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\StorageHandler\Database;
+namespace Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception\DriverException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\Expression\CompositeExpression;
 use Doctrine\DBAL\Schema\Schema;
-use Kaliop\eZMigrationBundle\API\StorageHandlerInterface;
-use Kaliop\eZMigrationBundle\API\Collection\MigrationCollection;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Value\Migration as APIMigration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\StorageHandlerInterface;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration as APIMigration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
 
 /**
  * Database-backed storage for info on executed migrations

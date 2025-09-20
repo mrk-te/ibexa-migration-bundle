@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
 /**
  * Interface that all migration definition handlers need to implement.

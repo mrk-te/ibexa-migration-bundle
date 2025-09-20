@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException;
 use Ibexa\Contracts\Core\Repository\Values\ContentType\ContentTypeGroup;
-use Kaliop\eZMigrationBundle\API\Collection\ContentTypeGroupCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\KeyMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Collection\ContentTypeGroupCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\KeyMatcherInterface;
 
 class ContentTypeGroupMatcher extends RepositoryMatcher implements KeyMatcherInterface
 {

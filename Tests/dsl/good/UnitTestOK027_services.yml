@@ -31,7 +31,7 @@
     arguments:
         - 'abc'
     catch:
-        - '\Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException'
+        - '\Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException'
     references:
          -
             identifier: result_ref2

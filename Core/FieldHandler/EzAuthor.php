@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\Author\Value as AuthorValue;
 use Ibexa\Core\FieldType\Author\Author;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 
 /**
  * @todo is this needed at all ?

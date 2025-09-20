@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\Image\Value as ImageValue;
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
 class EzImage extends FileFieldHandler implements FieldValueConverterInterface
 {

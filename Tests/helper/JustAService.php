@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
-use Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException;
 
 class JustAService
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 /**
  * Interface for field handlers that handle translation of ContentType Field definition settings

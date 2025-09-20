@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 /**
  * Interface for all classes dealing with the conversion of field values from hash representation to repo values

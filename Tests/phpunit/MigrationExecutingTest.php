@@ -2,7 +2,7 @@
 
 include_once(__DIR__.'/CommandExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 abstract class MigrationExecutingTest extends CommandExecutingTest
 {
