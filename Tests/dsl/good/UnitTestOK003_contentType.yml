@@ -14,7 +14,7 @@
     default_sort_order: asc
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             description: Title
@@ -99,7 +99,7 @@
         identifier: reference:kmb_test_003_1_identifier
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             description: Title field
@@ -110,105 +110,105 @@
             field-settings: []
             default-value: 'hello world'
         -
-            type: ezauthor
-            name: ezauthor
-            identifier: ezauthor
+            type: ibexa_author
+            name: ibexa_author
+            identifier: ibexa_author
         -
-            type: ezbinaryfile
-            name: ezbinaryfile
-            identifier: ezbinaryfile
+            type: ibexa_binaryfile
+            name: ibexa_binaryfile
+            identifier: ibexa_binaryfile
             validator-configuration:
                 FileSizeValidator: { maxFileSize: 123 }
         -
-            type: ezboolean
-            name: ezboolean
-            identifier: ezboolean
+            type: ibexa_boolean
+            name: ibexa_boolean
+            identifier: ibexa_boolean
             default-value: true
         -
-            type: ezcountry
-            name: ezcountry
-            identifier: ezcountry
+            type: ibexa_country
+            name: ibexa_country
+            identifier: ibexa_country
             field-settings:
                 isMultiple: true
             default-value: [ AF ]
         -
-            type: ezdatetime
-            name: ezdatetime
-            identifier: ezdatetime
+            type: ibexa_datetime
+            name: ibexa_datetime
+            identifier: ibexa_datetime
             field-settings:
                 defaultType: 1
                 useSeconds: true
                 dateInterval: null
         -
-            type: ezdate
-            name: ezdate
-            identifier: ezdate
+            type: ibexa_date
+            name: ibexa_date
+            identifier: ibexa_date
             field-settings:
                 defaultType: 1
         -
-            type: ezemail
-            name: ezemail
-            identifier: ezemail
+            type: ibexa_email
+            name: ibexa_email
+            identifier: ibexa_email
         -
-            type: ezfloat
-            name: ezfloat
-            identifier: ezfloat
+            type: ibexa_float
+            name: ibexa_float
+            identifier: ibexa_float
             validator-configuration:
                 FloatValueValidator: { minFloatValue: 42, maxFloatValue: 43 }
             default-value: 42.42
-        # @todo ezgmaplocation fieldType seems to be enabled by default, but the db table might *not* be present...
+        # @todo ibexa_gmap_location fieldType seems to be enabled by default, but the db table might *not* be present...
         #-
-        #    type: ezgmaplocation
-        #    name: ezgmaplocation
-        #    identifier: ezgmaplocation
+        #    type: ibexa_gmap_location
+        #    name: ibexa_gmap_location
+        #    identifier: ibexa_gmap_location
         -
-            type: ezimage
-            name: ezimage
-            identifier: ezimage
+            type: ibexa_image
+            name: ibexa_image
+            identifier: ibexa_image
             validator-configuration:
                 FileSizeValidator: { maxFileSize: 234 }
         -
-            type: ezinteger
-            name: ezinteger
-            identifier: ezinteger
+            type: ibexa_integer
+            name: ibexa_integer
+            identifier: ibexa_integer
             validator-configuration:
                 IntegerValueValidator: { minIntegerValue: -100, maxIntegerValue: 100 }
             default-value: 42
         -
-            type: ezisbn
-            name: ezisbn
-            identifier: ezisbn
+            type: ibexa_isbn
+            name: ibexa_isbn
+            identifier: ibexa_isbn
         -
-            type: ezkeyword
-            name: ezkeyword
-            identifier: ezkeyword
+            type: ibexa_keyword
+            name: ibexa_keyword
+            identifier: ibexa_keyword
         -
-            type: ezmedia
-            name: ezmedia
-            identifier: ezmedia
+            type: ibexa_media
+            name: ibexa_media
+            identifier: ibexa_media
             field-settings:
                 mediaType: html5_video
             validator-configuration:
                 FileSizeValidator: { maxFileSize: 345 }
         -
-            type: ezobjectrelation
-            name: ezobjectrelation
-            identifier: ezobjectrelation
+            type: ibexa_object_relation
+            name: ibexa_object_relation
+            identifier: ibexa_object_relation
             field-settings:
                 selectionMethod: 1
                 selectionRoot: 2
         -
-            type: ezobjectrelationlist
-            name: ezobjectrelationlist
-            identifier: ezobjectrelationlist
+            type: ibexa_object_relation_list
+            name: ibexa_object_relation_list
+            identifier: ibexa_object_relation_list
             field-settings:
                 selectionMethod: 1
                 selectionDefaultLocation: 2
                 selectionContentTypes: [ folder ]
         -
-            type: ezselection
-            name: ezselection
-            identifier: ezselection
+            type: ibexa_selection
+            name: ibexa_selection
+            identifier: ibexa_selection
             field-settings:
                 isMultiple: true
                 options: [ one, two ]
@@ -218,32 +218,32 @@
         #    name: ezsrrating
         #    identifier: ezsrrating
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
             validator-configuration:
                   StringLengthValidator: { maxStringLength: 255, minStringLength: 1 }
         -
-            type: eztext
-            name: eztext
-            identifier: eztext
+            type: ibexa_text
+            name: ibexa_text
+            identifier: ibexa_text
             field-settings:
                 textRows: 25
         -
-            type: eztime
-            name: eztime
-            identifier: eztime
+            type: ibexa_time
+            name: ibexa_time
+            identifier: ibexa_time
             field-settings:
                 defaultType: 1
                 useSeconds: true
         -
-            type: ezurl
-            name: ezurl
-            identifier: ezurl
+            type: ibexa_url
+            name: ibexa_url
+            identifier: ibexa_url
         -
-            type: ezuser
-            name: ezuser
-            identifier: ezuser
+            type: ibexa_user
+            name: ibexa_user
+            identifier: ibexa_user
     references:
         -
             identifier: kmb_test_003_6_count
@@ -264,12 +264,12 @@
     attributes:
         -
             name: The Subtitle
-            identifier: ezstring
+            identifier: ibexa_string
             new_identifier: subtitle
         -
             name: An Image
             description: An Image Field
-            identifier: ezimage
+            identifier: ibexa_image
             new_identifier: image
     references:
         -
@@ -364,7 +364,7 @@
             attribute: 'attributes.title.required'
         -
             identifier: world
-            attribute: 'attributes.ezobjectrelationlist."field-settings".selectionContentTypes.length(@)'
+            attribute: 'attributes.ibexa_object_relation_list."field-settings".selectionContentTypes.length(@)'
         -
             identifier: goodbye
             attribute: content_type_groups_ids
@@ -391,7 +391,7 @@
     # add a thubmnail field
     attributes:
         -
-            type: ezimage
+            type: ibexa_image
             name: ezthumb
             identifier: ezthumb
             is-thumbnail: true
@@ -404,7 +404,7 @@
     # remove all attributes except the title
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             description: Title

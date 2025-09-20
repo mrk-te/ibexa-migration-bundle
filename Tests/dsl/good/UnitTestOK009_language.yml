@@ -17,12 +17,12 @@
         abc-DE: Kaliop Migration Bundle Test Class 999
     description:
         abc-DE: Ceci Est Kaliop Migration Bundle Test Class 9
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     lang: abc-DE
     attributes:
         -
-            type: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            identifier: ibexa_string
             name:
                 eng-GB: eZStringA
                 abc-DE: eZStringB
@@ -38,10 +38,10 @@
             attribute: name
         -
             identifier: kmb_test_9_attr_name
-            attribute: attributes.ezstring.name
+            attribute: attributes.ibexa_string.name
         -
             identifier: kmb_test_9_attr_desc
-            attribute: attributes.ezstring.description
+            attribute: attributes.ibexa_string.description
 
 -
     type: assert
@@ -109,7 +109,7 @@
     parent_location: 2
     lang: abc-DE
     attributes:
-        - ezstring: hello world 1
+        - ibexa_string: hello world 1
     references:
         -
             identifier: kmb_test_9_content
@@ -121,7 +121,7 @@
         content_id: reference:kmb_test_9_content
     lang: eng-GB
     attributes:
-        - ezstring: hello world 2
+        - ibexa_string: hello world 2
 -
     type: content
     mode: delete
@@ -135,7 +135,7 @@
     parent_location: 2
     lang: abc-DE
     attributes:
-        - ezstring:
+        - ibexa_string:
             eng-GB: hello world 1 eng-GB
             abc-DE: hello world 1 abc-DE
     references:
@@ -150,7 +150,7 @@
         content_id: reference:kmb_test_10_content
     lang: eng-GB
     attributes:
-        - ezstring:
+        - ibexa_string:
             eng-GB: hello world 2 eng-GB
             abc-DE: hello world 2 abc-DE
 -
@@ -166,7 +166,7 @@
     parent_location: 2
     lang: abc-DE
     attributes:
-        ezstring:
+        ibexa_string:
             eng-GB: hello world 3 eng-GB
             abc-DE: hello world 3 abc-DE
     references:
@@ -181,7 +181,7 @@
         content_id: reference:kmb_test_11_content
     lang: eng-GB
     attributes:
-        ezstring:
+        ibexa_string:
             eng-GB: hello world 4 eng-GB
             abc-DE: hello world 4 abc-DE
 -

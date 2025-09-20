@@ -9,12 +9,12 @@
     content_type_group: 1
     identifier: kmb_test_18
     name: Kaliop Migration Bundle Test Class 18
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
     references:
         -
             identifier: kmb_test_18
@@ -28,7 +28,7 @@
     lang: eng-GB
     attributes:
         -
-            ezstring: hello world 1
+            ibexa_string: hello world 1
 -
     type: content
     mode: create
@@ -38,6 +38,6 @@
     # lang: should be the default language (def-LA and not eng-GB from the previous)
     attributes:
         -
-            ezstring: hello world 2
+            ibexa_string: hello world 2
 
 # Note: deletion of content, content type and language is carried out by the php test running this migration

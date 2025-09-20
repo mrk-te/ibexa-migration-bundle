@@ -42,7 +42,7 @@ class XmlTextTest extends MigrationExecutingTest
 
     public function goodDSLProvider()
     {
-        $dslDir = $this->dslDir.'/ezxmltext';
+        $dslDir = $this->dslDir.'/ibexa_richtext';
 
         $out = array();
         foreach (scandir($dslDir) as $fileName) {

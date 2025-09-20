@@ -6,7 +6,7 @@ use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
 /**
- * @todo make fieldSettings independent from version of ezmatrix in use, by converting them from a common format
+ * @todo make fieldSettings independent from version of ibexa_matrix in use, by converting them from a common format
  */
 class EzMatrix extends AbstractFieldHandler implements FieldValueConverterInterface
 {

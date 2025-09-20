@@ -65,7 +65,7 @@
     name_pattern: <title>
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: Title
             identifier: title
             description: Title

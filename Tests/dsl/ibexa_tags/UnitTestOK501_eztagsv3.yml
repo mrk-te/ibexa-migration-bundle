@@ -8,7 +8,7 @@
     is_container: true
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: title
             identifier: title
     references:
@@ -226,7 +226,7 @@
     is_container: true
     attributes:
         -
-            type: ezstring
+            type: ibexa_string
             name: title
             identifier: title
         -

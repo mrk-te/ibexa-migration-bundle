@@ -49,12 +49,12 @@
     content_type_group: 1
     identifier: kmb_test_12_ct
     name: Kaliop Migration Bundle Test Class 12
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
 
 -
     type: content
@@ -62,7 +62,7 @@
     content_type: kmb_test_12_ct
     parent_location: 2
     attributes:
-        - ezstring: hello world
+        - ibexa_string: hello world
     references:
         -
             identifier: kmb_test_12_obj

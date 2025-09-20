@@ -40,7 +40,7 @@ class MatrixTest extends MigrationExecutingTest
 
     public function goodDSLProvider()
     {
-        $dslDir = $this->dslDir.'/ezmatrix/platform';
+        $dslDir = $this->dslDir.'/ibexa_matrix/platform';
 
         $out = array();
         foreach (scandir($dslDir) as $fileName) {

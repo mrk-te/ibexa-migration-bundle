@@ -31,12 +31,12 @@
     content_type_group: 1
     identifier: kmb_test_32_cti
     name: Kaliop Migration Bundle Test Class 32
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
     references:
         -
             identifier: kmb_test_32_ct
@@ -48,7 +48,7 @@
     parent_location: 2
     owner: reference:kmb_test_32_u
     attributes:
-        - ezstring: hello world 32
+        - ibexa_string: hello world 32
     references:
         -
             identifier: kmb_test_32_c
