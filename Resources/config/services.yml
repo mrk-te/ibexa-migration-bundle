@@ -58,7 +58,6 @@ parameters:
     ez_migration_bundle.executor.file.class: Kaliop\eZMigrationBundle\Core\Executor\FileExecutor
     ez_migration_bundle.executor.http.class: Kaliop\eZMigrationBundle\Core\Executor\HTTPExecutor
     ez_migration_bundle.executor.loop.class: Kaliop\eZMigrationBundle\Core\Executor\LoopExecutor
-    ez_migration_bundle.executor.mail.class: Kaliop\eZMigrationBundle\Core\Executor\MailExecutor
     ez_migration_bundle.executor.migration.class: Kaliop\eZMigrationBundle\Core\Executor\MigrationExecutor
     ez_migration_bundle.executor.migration_definition.class: Kaliop\eZMigrationBundle\Core\Executor\MigrationDefinitionExecutor
     ez_migration_bundle.executor.php.class: Kaliop\eZMigrationBundle\Core\Executor\PHPExecutor
@@ -261,16 +260,6 @@ services:
             - { name: ez_migration_bundle.executor }
         # avoid 'ServiceCircularReferenceException' errors by making this lazy
         lazy: true
-
-    ez_migration_bundle.executor.mail:
-        class: '%ez_migration_bundle.executor.mail.class%'
-        arguments:
-            - '@mailer'
-            - '@ez_migration_bundle.reference_resolver.customreference'
-        calls:
-            - ['setReferenceMatcher', ['@ez_migration_bundle.reference_matcher']]
-        tags:
-            - { name: ez_migration_bundle.executor }
 
     ez_migration_bundle.executor.migration:
         class: '%ez_migration_bundle.executor.migration.class%'

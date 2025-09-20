@@ -26,17 +26,16 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.3",
         "ext-ctype": "*",
         "ext-json": "*",
         "ext-pdo": "*",
         "doctrine/dbal": "^2.11|^3.0",
-        "ibexa/core": "^4.0",
+        "ibexa/core": "^5.0",
         "mtdowling/jmespath.php": "^2.0.0",
-        "nikic/php-parser": "^4.2.2",
+        "nikic/php-parser": "^5.0",
         "symfony/expression-language": "*",
         "symfony/process": "*",
-        "symfony/swiftmailer-bundle": "*",
         "symfony/validator": "*",
         "symfony/var-dumper": "*"
     },
