@@ -9,6 +9,8 @@ use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
 use Kaliop\eZMigrationBundle\Core\EventListener\TracingStepExecutedListener;
 use Kaliop\eZMigrationBundle\Core\MigrationService;
 use Kaliop\eZMigrationBundle\Core\Process\Process;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -21,12 +23,14 @@ use Symfony\Component\Process\PhpExecutableFinder;
 /**
  * Command to execute the available migration definitions.
  */
+#[AsCommand(
+    name: 'kaliop:migration:migrate',
+    description: 'Execute available migration definitions.',
+)]
 class MigrateCommand extends AbstractCommand
 {
     // in between QUIET and NORMAL. Sadly the OutputInterface consts changed somewhere between Symfony 2 and 3. Will they do it again?
     static $VERBOSITY_CHILD = 0.5;
-
-    protected static $defaultName = 'kaliop:migration:migrate';
 
     protected $subProcessTimeout = 86400;
     protected $subProcessErrorString = '';
@@ -44,12 +48,11 @@ class MigrateCommand extends AbstractCommand
      *
      * Define the name, options and help text.
      */
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
         $this
-            ->setDescription('Execute available migration definitions.')
             // nb: when adding options, remember to forward them to sub-commands executed in 'separate-process' mode
             ->addOption('admin-login', 'a', InputOption::VALUE_REQUIRED, "Login of admin account used whenever elevated privileges are needed (user id 14 used by default)")
             ->addOption('clear-cache', 'c', InputOption::VALUE_NONE, "Clear the cache after the command finishes")
@@ -90,7 +93,7 @@ EOT
      * @param OutputInterface $output
      * @return int 0 if everything went fine, or an error code
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $start = microtime(true);
 
@@ -112,7 +115,7 @@ EOT
 
         if (!count($toExecute)) {
             $output->writeln('<info>No migrations to execute</info>');
-            return 0;
+            return Command::SUCCESS;
         }
 
         $this->printMigrationsList($toExecute, $input, $output);
@@ -120,7 +123,7 @@ EOT
         if (!$input->getOption('child')) {
             // ask user for confirmation to make changes
             if (!$this->askForConfirmation($input, $output)) {
-                return 0;
+                return Command::SUCCESS;
             }
         }
 
@@ -498,7 +501,7 @@ EOT
         // mandatory args and options
         $builderArgs = array(
             $this->getConsoleFile(), // sf console
-            static::$defaultName, // name of sf command
+            $this->getName(), // name of sf command
             '--env=' . $kernel->getEnvironment(), // sf env
             '--child'
         );
