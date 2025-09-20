@@ -8,11 +8,11 @@ Upgrade notes for developers coming from an ezmgrationbundle installation.
   Also, the `src/MigrationsDefinitons` directory is searched for migrations, if it exists, besides the
   bundles directories.
 
-* config parameter `kaliop_bundle_migration.version_directory` was renamed to `ez_migration_bundle.version_directory`.
+* config parameter `kaliop_bundle_migration.version_directory` was renamed to `ibexa_migration_bundle.version_directory`.
 
 * deprecated parameter config `kaliop_bundle_migration.table_name` was dropped
 
-* service `ez_migration_bundle.complex_field.ezpage` has been removed, as upstream has dropped the ezpage field type
+* service `ibexa_migration_bundle.complex_field.ezpage` has been removed, as upstream has dropped the ezpage field type
 
 * cli command `kaliop:migration:update` was removed. It was an alias of `kaliop:migration:migrate`
 

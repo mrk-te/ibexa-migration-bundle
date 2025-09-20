@@ -130,7 +130,7 @@ class MigrateTest extends MigrationExecutingTest
     {
         $filePath = $this->dslDir.'/misc/UnitTestOK031_helloworld.yml';
 
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
 
         // Make sure migration is not in the db: delete it, ignoring errors
         $this->prepareMigration($filePath);
@@ -175,7 +175,7 @@ class MigrateTest extends MigrationExecutingTest
     {
         $filePath = $this->dslDir.'/misc/UnitTestOK019_cancel.yml';
 
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
 
         // Make sure migration is not in the db: delete it, ignoring errors
         $this->prepareMigration($filePath);
@@ -200,7 +200,7 @@ class MigrateTest extends MigrationExecutingTest
     {
         $filePath = $this->dslDir.'/misc/UnitTestOK020_fail.yml';
 
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
 
         // Make sure migration is not in the db: delete it, ignoring errors
         $this->prepareMigration($filePath);

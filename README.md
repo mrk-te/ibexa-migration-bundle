@@ -88,7 +88,7 @@ status command in your eZPlatform root directory:
 
 The list of migrations which have been already applied is stored in the database, in a table named `kaliop_migrations`.
 The bundle will automatically create the table if needed.
-In case you need to use a different name for that table, you can change the Symfony parameter `ez_migration_bundle.table_name`.
+In case you need to use a different name for that table, you can change the Symfony parameter `ibexa_migration_bundle.table_name`.
 
 ### Applying migrations
 
@@ -248,24 +248,24 @@ action executors - is to use Event Listeners.
 
 Two events are fired *for each step* during execution of migrations:
 
-    * ez_migration.before_execution => listeners receive a BeforeStepExecutionEvent event instance
-    * ez_migration.step_executed => listeners receive a StepExecutedEvent event instance
+    * ibexa_migration.before_execution => listeners receive a BeforeStepExecutionEvent event instance
+    * ibexa_migration.step_executed => listeners receive a StepExecutedEvent event instance
 
 An event is fired only in case a migration fails because a step throws a specific migration abort exception:
 
-    * ez_migration.migration_aborted => listeners receive a MigrationAbortedEvent event instance
+    * ibexa_migration.migration_aborted => listeners receive a MigrationAbortedEvent event instance
 
 An event is fired when a migration is being generated using the `kaliop:migration:generate` command, allowing to alter
 the data that will be serialized as migration steps:
 
-    * ez_migration.migration_generated => listeners receive a MigrationGeneratedEvent event instance
+    * ibexa_migration.migration_generated => listeners receive a MigrationGeneratedEvent event instance
 
 In order to act on those events, you will need to declare tagged services, such as for ex:
 
     my.step_executed_listener:
         class: my\helper\StepExecutedListener
         tags:
-            - { name: kernel.event_listener, event: ez_migration.step_executed, method: onStepExecuted }
+            - { name: kernel.event_listener, event: ibexa_migration.step_executed, method: onStepExecuted }
 
 and the corresponding php class:
 
@@ -301,7 +301,7 @@ Event Subscribers are supported as an alternative to Event Listeners, as is stan
     - and/or configuring Solr to always commit changes to the index immediately (eg. disable `commitwithin`)
 
 * when using SOLR in multi-core configurations and getting a `java.lang.NegativeArraySizeException` error, you will have
-  to set a lower value than the default 2147483647 for parameter `ez_migration_bundle.query_limit`
+  to set a lower value than the default 2147483647 for parameter `ibexa_migration_bundle.query_limit`
 
 * if you get fatal errors without any error message when running a migration which involves a lot of content changes,
   such as f.e. altering a contentType with many contents, it might be that you are running out of memory for your
