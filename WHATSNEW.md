@@ -1,3 +1,9 @@
+Version: 2.0.0
+==============
+
+* Removed: Operation `type: mail / mode: send` and dependency to SwiftMailer. Use `type: service / mode: call` instead.
+
+
 Version: 1.0.5
 ==============
 
