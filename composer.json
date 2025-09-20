@@ -51,7 +51,7 @@
         "php-http/httplug-bundle": "Required for usage of HTTP/CALL migration steps"
     },
     "autoload": {
-        "psr-4": { "Kaliop\\eZMigrationBundle\\": "" }
+        "psr-4": { "Kaliop\\IbexaMigrationBundle\\": "" }
     },
     "config": {
         "allow-plugins": {

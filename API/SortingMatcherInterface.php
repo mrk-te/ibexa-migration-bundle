@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidSortConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidSortConditionsException;
 
 interface SortingMatcherInterface extends MatcherInterface
 {

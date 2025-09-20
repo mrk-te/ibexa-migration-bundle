@@ -2,8 +2,8 @@
 
 include_once(__DIR__.'/CommandExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\Collection\MigrationStepsCollection;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationStepsCollection;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 /**
  * Tests the 'filtering' features of the collections. Plain usage as array is already tested by the rest of the suite

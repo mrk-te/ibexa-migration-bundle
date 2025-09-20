@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 
 /**
  * Interface that all migration definition handlers need to implement if they can generate a migration definition.

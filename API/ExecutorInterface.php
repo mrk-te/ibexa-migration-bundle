@@ -1,13 +1,13 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
-use Kaliop\eZMigrationBundle\API\Exception\LoopBreakException;
-use Kaliop\eZMigrationBundle\API\Exception\LoopContinueException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationStepSkippedException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationSuspendedException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\LoopBreakException;
+use Kaliop\IbexaMigrationBundle\API\Exception\LoopContinueException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationStepSkippedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationSuspendedException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 /**
  * Interface that all migration definition handlers need to implement.

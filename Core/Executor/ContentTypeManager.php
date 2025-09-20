@@ -1,21 +1,21 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\ContentTypeService;
 use Ibexa\Contracts\Core\Repository\Values\ContentType\ContentType;
 use Ibexa\Contracts\Core\Repository\Values\ContentType\FieldDefinition;
 use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException;
-use Kaliop\eZMigrationBundle\API\Collection\ContentTypeCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\Core\Helper\SortConverter;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentTypeMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentTypeGroupMatcher;
-use Kaliop\eZMigrationBundle\Core\FieldHandlerManager;
+use Kaliop\IbexaMigrationBundle\API\Collection\ContentTypeCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentTypeMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentTypeGroupMatcher;
+use Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager;
 use JmesPath\Env as JmesPath;
 
 /**

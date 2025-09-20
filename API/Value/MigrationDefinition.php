@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Value;
+namespace Kaliop\IbexaMigrationBundle\API\Value;
 
-use Kaliop\eZMigrationBundle\API\Collection\MigrationStepsCollection;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationStepsCollection;
 
 /**
  * @property-read string $name

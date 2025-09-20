@@ -3,8 +3,8 @@
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
 use eZ\Publish\SPI\FieldType\ValidationError;
-use Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener;
-use Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener;
 
 /**
 * Tests the 'kaliop:migration:migrate' command for the (different versions of) Matrix field type

@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
-use Kaliop\eZMigrationBundle\API\Event\StepExecutedEvent;
-use Kaliop\eZMigrationBundle\API\Collection\AbstractCollection;
+use Kaliop\IbexaMigrationBundle\API\Event\StepExecutedEvent;
+use Kaliop\IbexaMigrationBundle\API\Collection\AbstractCollection;
 
 class StepExecutedListener
 {

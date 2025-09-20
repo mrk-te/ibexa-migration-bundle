@@ -2,9 +2,9 @@
 
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener;
-use Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener;
 
 /**
  * Tests the `resume` command

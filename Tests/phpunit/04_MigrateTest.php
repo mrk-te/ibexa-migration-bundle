@@ -3,9 +3,9 @@
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
 use Ibexa\Core\Repository\Values\User\UserReference;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener;
-use Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener;
 
 /**
  * Tests the 'kaliop:migration:migrate' and (partially) 'kaliop:migration:migration' commands
@@ -366,7 +366,7 @@ class MigrateTest extends MigrationExecutingTest
      * @return \Ibexa\Contracts\Core\Repository\Repository
      * @todo move to usage of ADMIN_USER_LOGIN
      */
-    protected function getRepository($loginUserId = \Kaliop\eZMigrationBundle\Core\MigrationService::ADMIN_USER_ID)
+    protected function getRepository($loginUserId = \Kaliop\IbexaMigrationBundle\Core\MigrationService::ADMIN_USER_ID)
     {
         // q: do we need bootContainer() here or would getContainer() do ?
         $repository = $this->getBootedContainer()->get('ibexa.api.repository');

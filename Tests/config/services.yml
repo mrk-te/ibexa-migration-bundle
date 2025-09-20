@@ -36,31 +36,31 @@ parameters:
 
 services:
     ibexa_migration_bundle.test.executor.assert:
-        class: Kaliop\eZMigrationBundle\Tests\helper\AssertExecutor
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\AssertExecutor
         arguments:
             - '@ibexa_migration_bundle.reference_resolver.customreference'
         tags:
             - { name: ibexa_migration_bundle.executor }
     ibexa_migration_bundle.test.step_executed_listener:
-        class: Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener
         tags:
             - { name: kernel.event_listener, event: ibexa_migration.step_executed, method: onStepExecuted }
     ibexa_migration_bundle.test.before_step_execution_listener:
-        class: Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener
         tags:
             - { name: kernel.event_listener, event: ibexa_migration.before_execution, method: onBeforeStepExecution }
     ibexa_migration_bundle.test.before_migration_generated_listener:
-        class: Kaliop\eZMigrationBundle\Tests\helper\MigrationGeneratedListener
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\MigrationGeneratedListener
         tags:
             - { name: kernel.event_listener, event: ibexa_migration.migration_generated, method: onMigrationGenerated }
     ibexa_migration_bundle.test.custom_reference_resolver:
-        class: Kaliop\eZMigrationBundle\Tests\helper\CustomReferenceResolver
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\CustomReferenceResolver
         tags:
             - { name: ibexa_migration_bundle.reference_resolver.customreference }
     ibexa_migration_bundle.test.just_a_service:
-        class: Kaliop\eZMigrationBundle\Tests\helper\JustAService
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\JustAService
         public: true
     ibexa_migration_bundle.test.query_type:
-        class: Kaliop\eZMigrationBundle\Tests\helper\MigrationTestQueryType
+        class: Kaliop\IbexaMigrationBundle\Tests\helper\MigrationTestQueryType
         tags:
             - { name: ezpublish.query_type }

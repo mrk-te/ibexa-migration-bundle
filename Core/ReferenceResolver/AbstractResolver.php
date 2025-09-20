@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverInterface;
 
 abstract class AbstractResolver extends PrefixBasedResolver implements EmbeddedReferenceResolverInterface
 {

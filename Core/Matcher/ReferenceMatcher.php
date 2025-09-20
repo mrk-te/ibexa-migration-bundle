@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Ibexa\Contracts\Core\Repository\Values\Content\Query\Criterion\Operator;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 
 /**
  * We abuse a bit the 'matcher' framework to set up a 'constraint' matcher which is used to tell whether a reference

@@ -1,6 +1,6 @@
 <?php
 
-use Kaliop\eZMigrationBundle\API\MigrationInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationInterface;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Process;
+namespace Kaliop\IbexaMigrationBundle\Core\Process;
 
 use Symfony\Component\Process\Process as BaseProcess;
 

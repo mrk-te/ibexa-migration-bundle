@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Content;
 use Ibexa\Contracts\Core\Repository\Values\User\UserGroup;
-use Kaliop\eZMigrationBundle\API\Collection\UserGroupCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\Core\Matcher\RoleMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\UserGroupMatcher;
+use Kaliop\IbexaMigrationBundle\API\Collection\UserGroupCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\RoleMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\UserGroupMatcher;
 
 /**
  * Handles user-group migrations.

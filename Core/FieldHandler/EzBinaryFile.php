@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\BinaryFile\Value as BinaryFileValue;
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
 class EzBinaryFile extends FileFieldHandler implements FieldValueConverterInterface
 {

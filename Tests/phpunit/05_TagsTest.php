@@ -2,8 +2,8 @@
 
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener;
-use Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener;
 
 /**
  * Tests the 'kaliop:migration:migrate' and (partially) 'kaliop:migration:migration' command for eZTags

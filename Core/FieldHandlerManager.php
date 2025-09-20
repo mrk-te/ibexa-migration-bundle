@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
 use Ibexa\Contracts\Core\Repository\FieldTypeService;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\API\FieldDefinitionConverterInterface;
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
 class FieldHandlerManager
 {

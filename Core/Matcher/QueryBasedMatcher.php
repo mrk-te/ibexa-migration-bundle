@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Query;
 use Ibexa\Contracts\Core\Repository\Values\Content\Query\SortClause;
 use Ibexa\Contracts\Core\Repository\Values\Content\Query\Criterion\Operator;
 use Ibexa\Contracts\Core\Repository\Repository;
 use Ibexa\Core\QueryType\QueryTypeRegistry;
-use Kaliop\eZMigrationBundle\API\KeyMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidSortConditionsException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\KeyMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidSortConditionsException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 use PhpParser\Node\Expr\Isset_;
 
 /**

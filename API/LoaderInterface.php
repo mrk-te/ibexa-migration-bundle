@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 /**
  * Implemented by classes which finds migrations definitions files
@@ -16,7 +16,7 @@ interface LoaderInterface
 
     /**
      * @param array $paths
-     * @return \Kaliop\eZMigrationBundle\API\Collection\MigrationDefinitionCollection unparsed definitions. key has to be the migration name
+     * @return \Kaliop\IbexaMigrationBundle\API\Collection\MigrationDefinitionCollection unparsed definitions. key has to be the migration name
      * @throws \Exception
      */
     public function loadDefinitions(array $paths = array());

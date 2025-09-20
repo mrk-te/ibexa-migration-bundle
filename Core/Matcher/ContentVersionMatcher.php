@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Matcher;
+namespace Kaliop\IbexaMigrationBundle\Core\Matcher;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\UnauthorizedException ;
 use Ibexa\Contracts\Core\Repository\Repository;
 use Ibexa\Contracts\Core\Repository\Values\Content\Content;
 use Ibexa\Contracts\Core\Repository\Values\Content\VersionInfo;
-use Kaliop\eZMigrationBundle\API\MatcherInterface;
-use Kaliop\eZMigrationBundle\API\Collection\VersionInfoCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException;
+use Kaliop\IbexaMigrationBundle\API\MatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Collection\VersionInfoCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException;
 
 class ContentVersionMatcher extends RepositoryMatcher implements MatcherInterface
 {

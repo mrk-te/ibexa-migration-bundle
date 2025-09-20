@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
 
 abstract class AbstractFieldHandler
 {

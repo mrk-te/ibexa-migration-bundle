@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
-use Kaliop\eZMigrationBundle\API\FieldDefinitionConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 
 class EzDateAndTime extends AbstractFieldHandler implements FieldValueConverterInterface, FieldDefinitionConverterInterface
 {

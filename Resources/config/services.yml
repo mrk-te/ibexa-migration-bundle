@@ -40,102 +40,102 @@ parameters:
     # an 'java.lang.NegativeArraySizeException' error
     ibexa_migration_bundle.query_limit: 2147483647
 
-    ibexa_migration_bundle.migration_service.class: Kaliop\eZMigrationBundle\Core\MigrationService
+    ibexa_migration_bundle.migration_service.class: Kaliop\IbexaMigrationBundle\Core\MigrationService
 
-    ibexa_migration_bundle.loader.filesystem.class: Kaliop\eZMigrationBundle\Core\Loader\Filesystem
-    ibexa_migration_bundle.loader.filesystem_recursive.class: Kaliop\eZMigrationBundle\Core\Loader\FilesystemRecursive
+    ibexa_migration_bundle.loader.filesystem.class: Kaliop\IbexaMigrationBundle\Core\Loader\Filesystem
+    ibexa_migration_bundle.loader.filesystem_recursive.class: Kaliop\IbexaMigrationBundle\Core\Loader\FilesystemRecursive
 
-    ibexa_migration_bundle.definition_parser.yaml.class: Kaliop\eZMigrationBundle\Core\DefinitionParser\YamlDefinitionParser
-    ibexa_migration_bundle.definition_parser.json.class: Kaliop\eZMigrationBundle\Core\DefinitionParser\JsonDefinitionParser
-    ibexa_migration_bundle.definition_parser.sql.class: Kaliop\eZMigrationBundle\Core\DefinitionParser\SQLDefinitionParser
-    ibexa_migration_bundle.definition_parser.php.class: Kaliop\eZMigrationBundle\Core\DefinitionParser\PHPDefinitionParser
+    ibexa_migration_bundle.definition_parser.yaml.class: Kaliop\IbexaMigrationBundle\Core\DefinitionParser\YamlDefinitionParser
+    ibexa_migration_bundle.definition_parser.json.class: Kaliop\IbexaMigrationBundle\Core\DefinitionParser\JsonDefinitionParser
+    ibexa_migration_bundle.definition_parser.sql.class: Kaliop\IbexaMigrationBundle\Core\DefinitionParser\SQLDefinitionParser
+    ibexa_migration_bundle.definition_parser.php.class: Kaliop\IbexaMigrationBundle\Core\DefinitionParser\PHPDefinitionParser
 
-    ibexa_migration_bundle.context_handler.class: Kaliop\eZMigrationBundle\Core\ContextHandler
+    ibexa_migration_bundle.context_handler.class: Kaliop\IbexaMigrationBundle\Core\ContextHandler
 
-    ibexa_migration_bundle.storage_handler.database.class: Kaliop\eZMigrationBundle\Core\StorageHandler\Database\Migration
-    ibexa_migration_bundle.context_storage_handler.database.class: Kaliop\eZMigrationBundle\Core\StorageHandler\Database\Context
+    ibexa_migration_bundle.storage_handler.database.class: Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database\Migration
+    ibexa_migration_bundle.context_storage_handler.database.class: Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database\Context
 
-    ibexa_migration_bundle.executor.file.class: Kaliop\eZMigrationBundle\Core\Executor\FileExecutor
-    ibexa_migration_bundle.executor.http.class: Kaliop\eZMigrationBundle\Core\Executor\HTTPExecutor
-    ibexa_migration_bundle.executor.loop.class: Kaliop\eZMigrationBundle\Core\Executor\LoopExecutor
-    ibexa_migration_bundle.executor.migration.class: Kaliop\eZMigrationBundle\Core\Executor\MigrationExecutor
-    ibexa_migration_bundle.executor.migration_definition.class: Kaliop\eZMigrationBundle\Core\Executor\MigrationDefinitionExecutor
-    ibexa_migration_bundle.executor.php.class: Kaliop\eZMigrationBundle\Core\Executor\PHPExecutor
-    ibexa_migration_bundle.executor.process.class: Kaliop\eZMigrationBundle\Core\Executor\ProcessExecutor
-    ibexa_migration_bundle.executor.service.class: Kaliop\eZMigrationBundle\Core\Executor\ServiceExecutor
-    ibexa_migration_bundle.executor.sql.class: Kaliop\eZMigrationBundle\Core\Executor\SQLExecutor
-    ibexa_migration_bundle.executor.reference.class: Kaliop\eZMigrationBundle\Core\Executor\ReferenceExecutor
-    ibexa_migration_bundle.executor.repository.class: Kaliop\eZMigrationBundle\Core\Executor\RepositoryExecutor
+    ibexa_migration_bundle.executor.file.class: Kaliop\IbexaMigrationBundle\Core\Executor\FileExecutor
+    ibexa_migration_bundle.executor.http.class: Kaliop\IbexaMigrationBundle\Core\Executor\HTTPExecutor
+    ibexa_migration_bundle.executor.loop.class: Kaliop\IbexaMigrationBundle\Core\Executor\LoopExecutor
+    ibexa_migration_bundle.executor.migration.class: Kaliop\IbexaMigrationBundle\Core\Executor\MigrationExecutor
+    ibexa_migration_bundle.executor.migration_definition.class: Kaliop\IbexaMigrationBundle\Core\Executor\MigrationDefinitionExecutor
+    ibexa_migration_bundle.executor.php.class: Kaliop\IbexaMigrationBundle\Core\Executor\PHPExecutor
+    ibexa_migration_bundle.executor.process.class: Kaliop\IbexaMigrationBundle\Core\Executor\ProcessExecutor
+    ibexa_migration_bundle.executor.service.class: Kaliop\IbexaMigrationBundle\Core\Executor\ServiceExecutor
+    ibexa_migration_bundle.executor.sql.class: Kaliop\IbexaMigrationBundle\Core\Executor\SQLExecutor
+    ibexa_migration_bundle.executor.reference.class: Kaliop\IbexaMigrationBundle\Core\Executor\ReferenceExecutor
+    ibexa_migration_bundle.executor.repository.class: Kaliop\IbexaMigrationBundle\Core\Executor\RepositoryExecutor
 
-    ibexa_migration_bundle.executor.content_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ContentManager
-    ibexa_migration_bundle.executor.content_version_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ContentVersionManager
-    ibexa_migration_bundle.executor.content_type_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ContentTypeManager
-    ibexa_migration_bundle.executor.content_type_group_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ContentTypeGroupManager
-    ibexa_migration_bundle.executor.language_manager.class: Kaliop\eZMigrationBundle\Core\Executor\LanguageManager
-    ibexa_migration_bundle.executor.location_manager.class: Kaliop\eZMigrationBundle\Core\Executor\LocationManager
-    ibexa_migration_bundle.executor.object_state_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ObjectStateManager
-    ibexa_migration_bundle.executor.object_state_group_manager.class: Kaliop\eZMigrationBundle\Core\Executor\ObjectStateGroupManager
-    ibexa_migration_bundle.executor.role_manager.class: Kaliop\eZMigrationBundle\Core\Executor\RoleManager
-    ibexa_migration_bundle.executor.section_manager.class: Kaliop\eZMigrationBundle\Core\Executor\SectionManager
-    ibexa_migration_bundle.executor.tag_manager.class: Kaliop\eZMigrationBundle\Core\Executor\TagManager
-    ibexa_migration_bundle.executor.trash_manager.class: Kaliop\eZMigrationBundle\Core\Executor\TrashManager
-    ibexa_migration_bundle.executor.user_manager.class: Kaliop\eZMigrationBundle\Core\Executor\UserManager
-    ibexa_migration_bundle.executor.url_alias.class: Kaliop\eZMigrationBundle\Core\Executor\UrlAliasManager
-    ibexa_migration_bundle.executor.url_wildcard.class: Kaliop\eZMigrationBundle\Core\Executor\UrlWildcardManager
-    ibexa_migration_bundle.executor.user_group_manager.class: Kaliop\eZMigrationBundle\Core\Executor\UserGroupManager
+    ibexa_migration_bundle.executor.content_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ContentManager
+    ibexa_migration_bundle.executor.content_version_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ContentVersionManager
+    ibexa_migration_bundle.executor.content_type_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ContentTypeManager
+    ibexa_migration_bundle.executor.content_type_group_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ContentTypeGroupManager
+    ibexa_migration_bundle.executor.language_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\LanguageManager
+    ibexa_migration_bundle.executor.location_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\LocationManager
+    ibexa_migration_bundle.executor.object_state_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ObjectStateManager
+    ibexa_migration_bundle.executor.object_state_group_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\ObjectStateGroupManager
+    ibexa_migration_bundle.executor.role_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\RoleManager
+    ibexa_migration_bundle.executor.section_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\SectionManager
+    ibexa_migration_bundle.executor.tag_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\TagManager
+    ibexa_migration_bundle.executor.trash_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\TrashManager
+    ibexa_migration_bundle.executor.user_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\UserManager
+    ibexa_migration_bundle.executor.url_alias.class: Kaliop\IbexaMigrationBundle\Core\Executor\UrlAliasManager
+    ibexa_migration_bundle.executor.url_wildcard.class: Kaliop\IbexaMigrationBundle\Core\Executor\UrlWildcardManager
+    ibexa_migration_bundle.executor.user_group_manager.class: Kaliop\IbexaMigrationBundle\Core\Executor\UserGroupManager
 
-    ibexa_migration_bundle.content_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcherDirectLoad
-    ibexa_migration_bundle.content_type_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ContentTypeMatcher
-    ibexa_migration_bundle.content_type_group_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ContentTypeGroupMatcher
-    ibexa_migration_bundle.content_version_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ContentVersionMatcher
-    ibexa_migration_bundle.language_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\LanguageMatcher
-    ibexa_migration_bundle.location_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\LocationMatcherDirectLoad
-    ibexa_migration_bundle.object_state_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateMatcher
-    ibexa_migration_bundle.object_state_group_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateGroupMatcher
-    ibexa_migration_bundle.reference_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\ReferenceMatcher
-    ibexa_migration_bundle.role_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\RoleMatcher
-    ibexa_migration_bundle.section_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher
-    ibexa_migration_bundle.tag_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\TagMatcher
-    ibexa_migration_bundle.trash_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\TrashMatcher
-    ibexa_migration_bundle.url_alias_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\UrlAliasMatcher
-    ibexa_migration_bundle.url_wildcard_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\UrlWildcardMatcher
-    ibexa_migration_bundle.user_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\UserMatcher
-    ibexa_migration_bundle.user_group_matcher.class: Kaliop\eZMigrationBundle\Core\Matcher\UserGroupMatcher
+    ibexa_migration_bundle.content_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcherDirectLoad
+    ibexa_migration_bundle.content_type_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ContentTypeMatcher
+    ibexa_migration_bundle.content_type_group_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ContentTypeGroupMatcher
+    ibexa_migration_bundle.content_version_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ContentVersionMatcher
+    ibexa_migration_bundle.language_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\LanguageMatcher
+    ibexa_migration_bundle.location_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\LocationMatcherDirectLoad
+    ibexa_migration_bundle.object_state_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateMatcher
+    ibexa_migration_bundle.object_state_group_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateGroupMatcher
+    ibexa_migration_bundle.reference_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\ReferenceMatcher
+    ibexa_migration_bundle.role_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\RoleMatcher
+    ibexa_migration_bundle.section_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher
+    ibexa_migration_bundle.tag_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\TagMatcher
+    ibexa_migration_bundle.trash_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\TrashMatcher
+    ibexa_migration_bundle.url_alias_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UrlAliasMatcher
+    ibexa_migration_bundle.url_wildcard_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UrlWildcardMatcher
+    ibexa_migration_bundle.user_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UserMatcher
+    ibexa_migration_bundle.user_group_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UserGroupMatcher
 
-    ibexa_migration_bundle.complex_field_manager.class: Kaliop\eZMigrationBundle\Core\FieldHandlerManager
-    ibexa_migration_bundle.complex_field.ezauthor.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzAuthor
-    ibexa_migration_bundle.complex_field.ezbinaryfile.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzBinaryFile
-    ibexa_migration_bundle.complex_field.ezboolean.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzBoolean
-    ibexa_migration_bundle.complex_field.country.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzCountry
-    ibexa_migration_bundle.complex_field.ezdate.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzDate
-    ibexa_migration_bundle.complex_field.ezdatetime.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzDateAndTime
-    ibexa_migration_bundle.complex_field.ezimage.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzImage
-    ibexa_migration_bundle.complex_field.ezmatrix.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzMatrix
-    ibexa_migration_bundle.complex_field.ezmedia.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzMedia
-    #ibexa_migration_bundle.complex_field.ezpage.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzPage
-    ibexa_migration_bundle.complex_field.ezrelation.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzRelation
-    ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzRelationList
-    ibexa_migration_bundle.complex_field.ezrichtext.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzRichText
-    ibexa_migration_bundle.complex_field.ezselection.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzSelection
-    ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzXmlText
-    ibexa_migration_bundle.complex_field.eztags.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzTags
+    ibexa_migration_bundle.complex_field_manager.class: Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager
+    ibexa_migration_bundle.complex_field.ezauthor.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzAuthor
+    ibexa_migration_bundle.complex_field.ezbinaryfile.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBinaryFile
+    ibexa_migration_bundle.complex_field.ezboolean.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBoolean
+    ibexa_migration_bundle.complex_field.country.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzCountry
+    ibexa_migration_bundle.complex_field.ezdate.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDate
+    ibexa_migration_bundle.complex_field.ezdatetime.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDateAndTime
+    ibexa_migration_bundle.complex_field.ezimage.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzImage
+    ibexa_migration_bundle.complex_field.ezmatrix.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMatrix
+    ibexa_migration_bundle.complex_field.ezmedia.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMedia
+    #ibexa_migration_bundle.complex_field.ezpage.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzPage
+    ibexa_migration_bundle.complex_field.ezrelation.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelation
+    ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelationList
+    ibexa_migration_bundle.complex_field.ezrichtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRichText
+    ibexa_migration_bundle.complex_field.ezselection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzSelection
+    ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzXmlText
+    ibexa_migration_bundle.complex_field.eztags.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzTags
     ibexa_migration_bundle.complex_field.ezimageasset.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzImageAsset
 
-    ibexa_migration_bundle.reference_resolver.chain.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ChainResolver
-    ibexa_migration_bundle.reference_resolver.chain_prefix.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ChainPrefixResolver
-    ibexa_migration_bundle.reference_resolver.customreference.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\CustomReferenceResolver
-    ibexa_migration_bundle.reference_resolver.content.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ContentResolver
-    ibexa_migration_bundle.reference_resolver.expression.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ExpressionResolver
-    ibexa_migration_bundle.reference_resolver.location.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\LocationResolver
-    ibexa_migration_bundle.reference_resolver.loop.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\LoopResolver
-    ibexa_migration_bundle.reference_resolver.tag.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\TagResolver
+    ibexa_migration_bundle.reference_resolver.chain.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ChainResolver
+    ibexa_migration_bundle.reference_resolver.chain_prefix.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ChainPrefixResolver
+    ibexa_migration_bundle.reference_resolver.customreference.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\CustomReferenceResolver
+    ibexa_migration_bundle.reference_resolver.content.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ContentResolver
+    ibexa_migration_bundle.reference_resolver.expression.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ExpressionResolver
+    ibexa_migration_bundle.reference_resolver.location.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\LocationResolver
+    ibexa_migration_bundle.reference_resolver.loop.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\LoopResolver
+    ibexa_migration_bundle.reference_resolver.tag.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\TagResolver
 
-    ibexa_migration_bundle.helper.limitation_converter.class: Kaliop\eZMigrationBundle\Core\Helper\LimitationConverter
-    ibexa_migration_bundle.helper.sort_converter.class: Kaliop\eZMigrationBundle\Core\Helper\SortConverter
-    ibexa_migration_bundle.helper.console_io.class: Kaliop\eZMigrationBundle\Core\Helper\ConsoleIO
-    ibexa_migration_bundle.helper.config.resolver: Kaliop\eZMigrationBundle\Core\Helper\ConfigResolver
+    ibexa_migration_bundle.helper.limitation_converter.class: Kaliop\IbexaMigrationBundle\Core\Helper\LimitationConverter
+    ibexa_migration_bundle.helper.sort_converter.class: Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter
+    ibexa_migration_bundle.helper.console_io.class: Kaliop\IbexaMigrationBundle\Core\Helper\ConsoleIO
+    ibexa_migration_bundle.helper.config.resolver: Kaliop\IbexaMigrationBundle\Core\Helper\ConfigResolver
 
-    ibexa_migration_bundle.step_executed_listener.tracing.class: Kaliop\eZMigrationBundle\Core\EventListener\TracingStepExecutedListener
+    ibexa_migration_bundle.step_executed_listener.tracing.class: Kaliop\IbexaMigrationBundle\Core\EventListener\TracingStepExecutedListener
 
 services:
 
@@ -903,16 +903,16 @@ services:
             - '@ibexa.config.resolver'
             - '@service_container'
 
-    Kaliop\eZMigrationBundle\Command\:
+    Kaliop\IbexaMigrationBundle\Command\:
         resource: '../../Command'
         autowire: true
         autoconfigure: true
 
     ### Aliases
 
-    Kaliop\eZMigrationBundle\API\ConfigResolverInterface: '@ibexa_migration_bundle.helper.config.resolver'
-    Kaliop\eZMigrationBundle\Core\MigrationService: '@ibexa_migration_bundle.migration_service'
-    Kaliop\eZMigrationBundle\Core\EventListener\TracingStepExecutedListener: '@ibexa_migration_bundle.step_executed_listener.tracing'
-    Kaliop\eZMigrationBundle\Core\Loader\FilesystemRecursive: '@ibexa_migration_bundle.loader.filesystem_recursive'
-    Kaliop\eZMigrationBundle\API\ReferenceBagInterface: '@ibexa_migration_bundle.reference_resolver.customreference'
-    Kaliop\eZMigrationBundle\API\ReferenceResolverBagInterface: '@ibexa_migration_bundle.reference_resolver.customreference'
+    Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface: '@ibexa_migration_bundle.helper.config.resolver'
+    Kaliop\IbexaMigrationBundle\Core\MigrationService: '@ibexa_migration_bundle.migration_service'
+    Kaliop\IbexaMigrationBundle\Core\EventListener\TracingStepExecutedListener: '@ibexa_migration_bundle.step_executed_listener.tracing'
+    Kaliop\IbexaMigrationBundle\Core\Loader\FilesystemRecursive: '@ibexa_migration_bundle.loader.filesystem_recursive'
+    Kaliop\IbexaMigrationBundle\API\ReferenceBagInterface: '@ibexa_migration_bundle.reference_resolver.customreference'
+    Kaliop\IbexaMigrationBundle\API\ReferenceResolverBagInterface: '@ibexa_migration_bundle.reference_resolver.customreference'

@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 /**
  * @property EmbeddedReferenceResolverBagInterface $referenceResolver
@@ -78,7 +78,7 @@ class FileExecutor extends AbstractExecutor
      * @param MigrationStep $step
      * @return string[][]
      * @throws InvalidStepDefinitionException
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException
      */
     protected function load_csv($step)
     {

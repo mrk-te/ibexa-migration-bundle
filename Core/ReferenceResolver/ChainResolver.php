@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\ReferenceBagInterface;
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverInterface;
-//use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Exception\ReferenceUnresolvedException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceBagInterface;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverInterface;
+//use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Exception\ReferenceUnresolvedException;
 
 /**
  * @todo allow to tweak the algorithm used to resolve references:

@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
-use Kaliop\eZMigrationBundle\API\ContextStorageHandlerInterface;
-use Kaliop\eZMigrationBundle\API\ContextProviderInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ContextStorageHandlerInterface;
+use Kaliop\IbexaMigrationBundle\API\ContextProviderInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 
 /**
  * Takes care of storing / restoring all necessary migration execution context information, acting as a "multiplexer":

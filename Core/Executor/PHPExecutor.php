@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class PHPExecutor extends BasePHPExecutor
@@ -13,7 +13,7 @@ class PHPExecutor extends BasePHPExecutor
     protected $supportedStepTypes = array('php');
     protected $supportedActions = array('call_function', 'call_static_method');
 
-    protected $mandatoryInterface = 'Kaliop\eZMigrationBundle\API\MigrationInterface';
+    protected $mandatoryInterface = 'Kaliop\IbexaMigrationBundle\API\MigrationInterface';
     protected $container;
 
     public function __construct(ContainerInterface $container, ReferenceResolverBagInterface $referenceResolver)

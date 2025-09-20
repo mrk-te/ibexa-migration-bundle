@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Exception\LoopBreakException;
-use Kaliop\eZMigrationBundle\API\Exception\LoopContinueException;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationStepSkippedException;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\Core\MigrationService;
-use Kaliop\eZMigrationBundle\Core\ReferenceResolver\LoopResolver;
+use Kaliop\IbexaMigrationBundle\API\Exception\LoopBreakException;
+use Kaliop\IbexaMigrationBundle\API\Exception\LoopContinueException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationStepSkippedException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\LoopResolver;
 
 class LoopExecutor extends AbstractExecutor
 {

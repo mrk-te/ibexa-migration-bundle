@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\DependencyInjection;
+namespace Kaliop\IbexaMigrationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

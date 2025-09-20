@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Content;
 use Ibexa\Contracts\Core\Repository\Values\Content\ContentCreateStruct;
@@ -9,18 +9,18 @@ use Ibexa\Contracts\Core\Repository\Values\Content\VersionInfo;
 use Ibexa\Contracts\Core\Repository\Values\ContentType\ContentType;
 use Ibexa\Contracts\Core\Repository\Values\ContentType\FieldDefinition;
 use Ibexa\Core\Base\Exceptions\NotFoundException;
-use Kaliop\eZMigrationBundle\API\Collection\ContentCollection;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\Core\FieldHandlerManager;
-use Kaliop\eZMigrationBundle\Core\Helper\SortConverter;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\UserMatcher;
+use Kaliop\IbexaMigrationBundle\API\Collection\ContentCollection;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager;
+use Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\UserMatcher;
 use JmesPath\Env as JmesPath;
 
 /**

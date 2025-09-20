@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Exception;
+namespace Kaliop\IbexaMigrationBundle\API\Exception;
 
 /**
  * Throw this exception in any step when in a loop, and you want the loop to stop, without the migration aborting

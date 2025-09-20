@@ -1,19 +1,19 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\VersionInfo;
 use Ibexa\Core\Base\Exceptions\NotFoundException;
-use Kaliop\eZMigrationBundle\API\Collection\VersionInfoCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentVersionMatcher;
-use Kaliop\eZMigrationBundle\Core\FieldHandlerManager;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\SectionMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\UserMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
-use Kaliop\eZMigrationBundle\Core\Helper\SortConverter;
+use Kaliop\IbexaMigrationBundle\API\Collection\VersionInfoCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentVersionMatcher;
+use Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\SectionMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\UserMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter;
 
 /**
  * Handles content-version migrations.

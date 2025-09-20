@@ -2,10 +2,10 @@
 
 include_once(__DIR__.'/CommandExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\ExecutorInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\ExecutorInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 /**
  * Tests usage of ibexa_migration_bundle.migration_service outside console commands

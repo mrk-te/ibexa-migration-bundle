@@ -2,7 +2,7 @@
 
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 /**
  * Tests transaction handling

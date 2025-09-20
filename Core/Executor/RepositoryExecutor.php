@@ -1,16 +1,16 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Repository;
 use Ibexa\Contracts\Core\Repository\Values\User\UserReference;
 use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\Collection\AbstractCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\Core\AuthenticatedUserSetterTrait;
+use Kaliop\IbexaMigrationBundle\API\Collection\AbstractCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\Core\AuthenticatedUserSetterTrait;
 
 /**
  * The core manager class that all migration action managers inherit from.
@@ -189,7 +189,7 @@ abstract class RepositoryExecutor extends AbstractExecutor
      *
      * @return \Ibexa\Contracts\Core\Repository\Values\User\UserReference previously logged-in user
      *
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidUserAccountException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidUserAccountException
      */
     protected function authenticateUserByContext(array $context): UserReference
     {

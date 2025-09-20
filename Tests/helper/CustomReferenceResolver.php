@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Tests\helper;
+namespace Kaliop\IbexaMigrationBundle\Tests\helper;
 
-use Kaliop\eZMigrationBundle\Core\ReferenceResolver\PrefixBasedResolverInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\PrefixBasedResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverInterface;
 
 /**
  * Does nothing for the moment, except making sure that it can be injected correctly via a tagged service

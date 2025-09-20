@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Loader;
+namespace Kaliop\IbexaMigrationBundle\Core\Loader;
 
-use Kaliop\eZMigrationBundle\API\LoaderInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Collection\MigrationDefinitionCollection;
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\LoaderInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationDefinitionCollection;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 /**

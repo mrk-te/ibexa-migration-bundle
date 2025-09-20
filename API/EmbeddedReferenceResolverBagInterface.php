@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 interface EmbeddedReferenceResolverBagInterface extends ReferenceResolverBagInterface, EmbeddedReferenceResolverInterface
 {
