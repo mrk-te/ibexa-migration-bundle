@@ -1,6 +1,7 @@
 Version: 2.0.0
 ==============
 
+* Added: Support for Ibexa 5.0 / Symfony 7
 * Removed: Operation `type: mail / mode: send` and dependency to SwiftMailer. Use `type: service / mode: call` instead.
 
 

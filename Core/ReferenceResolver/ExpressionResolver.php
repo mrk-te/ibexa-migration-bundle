@@ -38,7 +38,7 @@ class ExpressionResolver extends AbstractResolver implements ExpressionFunctionP
         return $expressionLanguage->evaluate($identifier);
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         $resolver = $this->referenceResolver;
 
