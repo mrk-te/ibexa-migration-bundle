@@ -26,4 +26,4 @@ if (file_exists($configDir.'/bootstrap.php')) {
 
 /// @todo if the kernel is booted first with this variable set to false, by eg. running a cli command instead of phpunit,
 ///       then it will be cached with the test config not loaded, which will make tests fail. How to prevent that?
-Kaliop\IbexaMigrationBundle\DependencyInjection\eZMigrationExtension::$loadTestConfig = true;
+Kaliop\IbexaMigrationBundle\DependencyInjection\IbexaMigrationExtension::$loadTestConfig = true;
