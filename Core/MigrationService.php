@@ -66,7 +66,7 @@ class MigrationService implements ContextProviderInterface
      */
     protected $contextHandler;
 
-    protected $eventPrefix = 'ez_migration.';
+    protected $eventPrefix = 'ibexa_migration.';
 
     protected $eventEntity = 'migration';
 

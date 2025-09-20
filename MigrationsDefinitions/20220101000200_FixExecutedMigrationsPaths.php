@@ -30,12 +30,12 @@ class FixExecutedMigrationsPaths implements MigrationInterface
 
     private function goForIt()
     {
-        $this->migrationsTableName = $this->container->getParameter('ez_migration_bundle.table_name');
+        $this->migrationsTableName = $this->container->getParameter('ibexa_migration_bundle.table_name');
 
         $this->connection = $this->container->get('ibexa.persistence.connection');
 
         /** @var \Kaliop\eZMigrationBundle\Core\Helper\ConsoleIO $io */
-        $io = $this->container->get('ez_migration_bundle.helper.console_io');
+        $io = $this->container->get('ibexa_migration_bundle.helper.console_io');
         // NB: in theory this could be null!
         $output = $io->getOutput();
 

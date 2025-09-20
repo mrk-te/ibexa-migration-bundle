@@ -13,17 +13,17 @@ class TaggedServicesCompilerPass implements CompilerPassInterface
      */
     public function process(ContainerBuilder $container)
     {
-        if ($container->has('ez_migration_bundle.migration_service')) {
-            $migrationService = $container->findDefinition('ez_migration_bundle.migration_service');
+        if ($container->has('ibexa_migration_bundle.migration_service')) {
+            $migrationService = $container->findDefinition('ibexa_migration_bundle.migration_service');
 
-            $DefinitionParsers = $container->findTaggedServiceIds('ez_migration_bundle.definition_parser');
+            $DefinitionParsers = $container->findTaggedServiceIds('ibexa_migration_bundle.definition_parser');
             foreach ($DefinitionParsers as $id => $tags) {
                 $migrationService->addMethodCall('addDefinitionParser', array(
                     new Reference($id)
                 ));
             }
 
-            $executors = $container->findTaggedServiceIds('ez_migration_bundle.executor');
+            $executors = $container->findTaggedServiceIds('ibexa_migration_bundle.executor');
             foreach ($executors as $id => $tags) {
                 $migrationService->addMethodCall('addExecutor', array(
                     new Reference($id)
@@ -31,10 +31,10 @@ class TaggedServicesCompilerPass implements CompilerPassInterface
             }
         }
 
-        if ($container->has('ez_migration_bundle.complex_field_manager')) {
-            $migrationService = $container->findDefinition('ez_migration_bundle.complex_field_manager');
+        if ($container->has('ibexa_migration_bundle.complex_field_manager')) {
+            $migrationService = $container->findDefinition('ibexa_migration_bundle.complex_field_manager');
 
-            $DefinitionParsers = $container->findTaggedServiceIds('ez_migration_bundle.complex_field');
+            $DefinitionParsers = $container->findTaggedServiceIds('ibexa_migration_bundle.complex_field');
 
             // allow for prioritization of tagged services
             $handlers = array();
@@ -58,9 +58,9 @@ class TaggedServicesCompilerPass implements CompilerPassInterface
             }
         }
 
-        if ($container->has('ez_migration_bundle.reference_resolver.customreference.flexible')) {
-            $customReferenceResolver = $container->findDefinition('ez_migration_bundle.reference_resolver.customreference.flexible');
-            $extraResolvers = $container->findTaggedServiceIds('ez_migration_bundle.reference_resolver.customreference');
+        if ($container->has('ibexa_migration_bundle.reference_resolver.customreference.flexible')) {
+            $customReferenceResolver = $container->findDefinition('ibexa_migration_bundle.reference_resolver.customreference.flexible');
+            $extraResolvers = $container->findTaggedServiceIds('ibexa_migration_bundle.reference_resolver.customreference');
 
             foreach ($extraResolvers as $id => $tags) {
                 $customReferenceResolver->addMethodCall('addResolver', array(
@@ -69,9 +69,9 @@ class TaggedServicesCompilerPass implements CompilerPassInterface
             }
         }
 
-        if ($container->has('ez_migration_bundle.context_handler')) {
-            $contextHandlerService = $container->findDefinition('ez_migration_bundle.context_handler');
-            $ContextProviders = $container->findTaggedServiceIds('ez_migration_bundle.context_provider');
+        if ($container->has('ibexa_migration_bundle.context_handler')) {
+            $contextHandlerService = $container->findDefinition('ibexa_migration_bundle.context_handler');
+            $ContextProviders = $container->findTaggedServiceIds('ibexa_migration_bundle.context_provider');
 
             foreach ($ContextProviders as $id => $tags) {
                 foreach ($tags as $attributes) {

@@ -7,7 +7,7 @@
 -
     type: service
     mode: call
-    service: ez_migration_bundle.test.just_a_service
+    service: ibexa_migration_bundle.test.just_a_service
     method: echoBack
     arguments:
         - 'reference:kmb_test_ref_027'
@@ -26,7 +26,7 @@
 -
     type: service
     mode: call
-    service: ez_migration_bundle.test.just_a_service
+    service: ibexa_migration_bundle.test.just_a_service
     method: throwMigrationAbortedException
     arguments:
         - 'abc'

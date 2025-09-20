@@ -8,14 +8,14 @@ use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
 use Kaliop\eZMigrationBundle\API\Value\Migration;
 
 /**
- * Tests usage of ez_migration_bundle.migration_service outside console commands
+ * Tests usage of ibexa_migration_bundle.migration_service outside console commands
  * @todo should we extend just KernelTestCase ?
  */
 class ServiceTest extends CommandExecutingTest implements ExecutorInterface
 {
     public function testMigrationFetching()
     {
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
         $ms->addExecutor($this);
         $md = new MigrationDefinition(
             'storage_test1.json',
