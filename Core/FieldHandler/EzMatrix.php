@@ -16,9 +16,9 @@ class EzMatrix extends AbstractFieldHandler implements FieldValueConverterInterf
 
         $rows = array();
         foreach ($fieldValue as $data) {
-            $rows[] = new \EzSystems\EzPlatformMatrixFieldtype\FieldType\Value\Row($data);
+            $rows[] = new \Ibexa\FieldTypeMatrix\FieldType\Value\Row($data);
         }
-        return new \EzSystems\EzPlatformMatrixFieldtype\FieldType\Value($rows);
+        return new \Ibexa\FieldTypeMatrix\FieldType\Value($rows);
 }
 
     public function fieldValueToHash($fieldValue, array $context = array())
