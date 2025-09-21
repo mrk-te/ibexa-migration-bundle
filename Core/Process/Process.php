@@ -12,12 +12,12 @@ class Process extends BaseProcess
 {
     static $forceSigchildEnabled = null;
 
-    public static function forceSigchildEnabled($force)
+    public static function forceSigchildEnabled($force): void
     {
         self::$forceSigchildEnabled = (bool) $force;
     }
 
-    protected function isSigchildEnabled()
+    protected function isSigchildEnabled(): bool
     {
         if (null !== self::$forceSigchildEnabled) {
             return self::$forceSigchildEnabled;
