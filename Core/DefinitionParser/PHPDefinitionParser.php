@@ -45,7 +45,7 @@ class PHPDefinitionParser implements DefinitionParserInterface
             // this should help with broken php migrations
 
             $pf = new ParserFactory();
-            $parser = $pf->create(ParserFactory::PREFER_PHP7);
+            $parser = $pf->createForHostVersion();
             try {
                 $parser->parse(file_get_contents($definition->path));
 
