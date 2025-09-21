@@ -1,6 +1,10 @@
 Version: 2.0.0
 ==============
 
+* Changed: Update \Kaliop\IbexaMigrationBundle\Core\Process\Process to Symfony 7
+* Changed: Update Doctrine\DBAL calls to Symfony 7
+* Changed: PHPParser instanciation
+* Changed: Rename `ez_lock` to `ibexa_lock`
 * Fixed: [Tests] Fix access to the container on Symfony 7
 * Changed: Rename `ez_lock` to `ibexa_lock`
 * Changed: Rename field types `ez*` to `ibexa_*`
