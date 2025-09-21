@@ -1,6 +1,8 @@
 Version: 2.0.0
 ==============
 
+* Fixed: [Tests] Fix access to the container on Symfony 7
+* Changed: Rename `ez_lock` to `ibexa_lock`
 * Changed: Rename field types `ez*` to `ibexa_*`
 * Changed: Rename `eZMigrationExtension` to `IbexaMigrationExtension`
 * Changed: Rename `eZMigrationBundle` to `IbexaMigrationBundle`
