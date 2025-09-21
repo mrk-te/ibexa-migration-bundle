@@ -444,7 +444,7 @@ class Migration extends TableStorage implements StorageHandlerInterface
         $t->addColumn('path', 'string', array('length' => 4000));
         $t->addColumn('md5', 'string', array('length' => 32));
         $t->addColumn('execution_date', 'integer', array('notnull' => false));
-        $t->addColumn('status', 'integer', array('default ' => APIMigration::STATUS_TODO));
+        $t->addColumn('status', 'integer', array('Default' => APIMigration::STATUS_TODO));
         $t->addColumn('execution_error', 'string', array('length' => 4000, 'notnull' => false));
         $t->setPrimaryKey(array('migration'));
         // in case users want to look up migrations by their full path
