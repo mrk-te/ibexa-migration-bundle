@@ -7,7 +7,7 @@ use Ibexa\Contracts\Core\Repository\FieldTypeService;
 use Ibexa\Core\FieldType\Country\Value as CountryValue;
 use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 
-class EzCountry extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaCountry extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     private $contentTypeService;
 

@@ -3,29 +3,28 @@
 namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverInterface;
 use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
 
-class EzXmlText extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
+class IbexaRichText extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     public function setReferenceResolver(ReferenceResolverInterface $referenceResolver)
     {
         if (! $referenceResolver instanceof EmbeddedReferenceResolverInterface) {
-            throw new MigrationBundleException("Reference resolver injected into EzXmlText field handler should implement EmbeddedReferenceResolverInterface");
+            throw new MigrationBundleException("Reference resolver injected into IbexaRichText field handler should implement EmbeddedReferenceResolverInterface");
         }
         parent::setReferenceResolver($referenceResolver);
     }
 
     /**
-     * Replaces any references in an xml string to be used as the input data for an ezxmltext field.
+     * Replaces any references in an xml string to be used as the input data for an ibexa_richtext field.
      *
      * @param string|array $fieldValue The definition of teh field value, structured in the yml file. Either a string, or an array with key 'content'
      * @param array $context The context for execution of the current migrations. Contains f.e. the path to the migration
      * @return string
      *
-     * @todo replace objects and location refs in eznode and ezobject links
+     * @todo replace objects and location refs in ezcontent:// and ezlocation:// links
      */
     public function hashToFieldValue($fieldValue, array $context = array())
     {
@@ -42,24 +41,5 @@ class EzXmlText extends AbstractFieldHandler implements FieldValueImporterInterf
         $resolver = $this->referenceResolver;
         /** @var EmbeddedReferenceResolverInterface $resolver */
         return $resolver->resolveEmbeddedReferences($xmlText);
-    }
-
-    public function fieldSettingsToHash($settingsValue, array $context = array())
-    {
-        // work around https://jira.ez.no/browse/EZP-26916
-        if (is_array($settingsValue) && isset($settingsValue['tagPreset'])) {
-            /// @todo this conversion should be based on the value of TagPresets ini legacy setting in ezxml.ini,
-            ///       keeping in mind that at migration execution time only values 0 and 1 are supported anyway...
-            if ($settingsValue['tagPreset'] == 'mini') {
-                $settingsValue['tagPreset'] = 1;
-            }
-            $settingsValue['tagPreset'] = (integer)$settingsValue['tagPreset'];
-        }
-        return $settingsValue;
-    }
-
-    public function hashToFieldSettings($settingsHash, array $context = array())
-    {
-        return $settingsHash;
     }
 }

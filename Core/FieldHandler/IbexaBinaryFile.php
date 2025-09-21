@@ -5,7 +5,7 @@ namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 use Ibexa\Core\FieldType\BinaryFile\Value as BinaryFileValue;
 use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
-class EzBinaryFile extends FileFieldHandler implements FieldValueConverterInterface
+class IbexaBinaryFile extends FileFieldHandler implements FieldValueConverterInterface
 {
     /**
      * @param array|string $fieldValue The path to the file or an array with 'path' key
