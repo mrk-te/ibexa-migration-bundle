@@ -23,6 +23,8 @@
         -
             type: ibexa_string
             identifier: ibexa_string
+            # Ibexa 5.0 : Is true by default
+            disable-translation: false
             name:
                 eng-GB: eZStringA
                 abc-DE: eZStringB
