@@ -8,7 +8,7 @@ use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 
-class EzSelection extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
+class IbexaSelection extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
 {
     protected $repository;
 

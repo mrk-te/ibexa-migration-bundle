@@ -5,7 +5,7 @@ namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 use Ibexa\Core\FieldType\Checkbox\Value as CheckboxValue;
 use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 
-class EzBoolean extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaBoolean extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     /**
      * Creates a value object to use as the field value when setting a boolean field type.

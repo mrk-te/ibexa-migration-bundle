@@ -4,7 +4,7 @@ namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
-class EzDate extends AbstractFieldHandler implements FieldValueConverterInterface
+class IbexaDate extends AbstractFieldHandler implements FieldValueConverterInterface
 {
     /**
      * Creates a value object to use as the field value when setting a boolean field type.

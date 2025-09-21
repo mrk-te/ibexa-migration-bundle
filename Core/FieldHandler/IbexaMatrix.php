@@ -8,7 +8,7 @@ use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 /**
  * @todo make fieldSettings independent from version of ibexa_matrix in use, by converting them from a common format
  */
-class EzMatrix extends AbstractFieldHandler implements FieldValueConverterInterface
+class IbexaMatrix extends AbstractFieldHandler implements FieldValueConverterInterface
 {
     public function hashToFieldValue($fieldValue, array $context = array())
     {

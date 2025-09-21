@@ -6,7 +6,7 @@ use Ibexa\Core\FieldType\RelationList\Value;
 use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
-class EzRelationList extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaRelationList extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     protected $contentMatcher;
 

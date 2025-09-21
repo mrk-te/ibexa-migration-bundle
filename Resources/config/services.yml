@@ -103,22 +103,22 @@ parameters:
     ibexa_migration_bundle.user_group_matcher.class: Kaliop\IbexaMigrationBundle\Core\Matcher\UserGroupMatcher
 
     ibexa_migration_bundle.complex_field_manager.class: Kaliop\IbexaMigrationBundle\Core\FieldHandlerManager
-    ibexa_migration_bundle.complex_field.ibexa_author.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzAuthor
-    ibexa_migration_bundle.complex_field.ibexa_binaryfile.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBinaryFile
-    ibexa_migration_bundle.complex_field.ibexa_boolean.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzBoolean
-    ibexa_migration_bundle.complex_field.country.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzCountry
-    ibexa_migration_bundle.complex_field.ibexa_date.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDate
-    ibexa_migration_bundle.complex_field.ibexa_datetime.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzDateAndTime
-    ibexa_migration_bundle.complex_field.ibexa_image.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzImage
-    ibexa_migration_bundle.complex_field.ibexa_matrix.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMatrix
-    ibexa_migration_bundle.complex_field.ibexa_media.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzMedia
+    ibexa_migration_bundle.complex_field.ibexa_author.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaAuthor
+    ibexa_migration_bundle.complex_field.ibexa_binaryfile.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaBinaryFile
+    ibexa_migration_bundle.complex_field.ibexa_boolean.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaBoolean
+    ibexa_migration_bundle.complex_field.country.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaCountry
+    ibexa_migration_bundle.complex_field.ibexa_date.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaDate
+    ibexa_migration_bundle.complex_field.ibexa_datetime.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaDateAndTime
+    ibexa_migration_bundle.complex_field.ibexa_image.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaImage
+    ibexa_migration_bundle.complex_field.ibexa_matrix.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaMatrix
+    ibexa_migration_bundle.complex_field.ibexa_media.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaMedia
     #ibexa_migration_bundle.complex_field.ezpage.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzPage
-    ibexa_migration_bundle.complex_field.ezrelation.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelation
-    ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRelationList
-    ibexa_migration_bundle.complex_field.ibexa_richtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzRichText
-    ibexa_migration_bundle.complex_field.ibexa_selection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzSelection
-    ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzXmlText
-    ibexa_migration_bundle.complex_field.eztags.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\EzTags
+    ibexa_migration_bundle.complex_field.ezrelation.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaRelation
+    ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaRelationList
+    ibexa_migration_bundle.complex_field.ibexa_richtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaRichText
+    ibexa_migration_bundle.complex_field.ibexa_selection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaSelection
+    ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaXmlText
+    ibexa_migration_bundle.complex_field.eztags.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaTags
     ibexa_migration_bundle.complex_field.ezimageasset.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzImageAsset
 
     ibexa_migration_bundle.reference_resolver.chain.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ChainResolver

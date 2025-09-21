@@ -7,7 +7,7 @@ use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
-class EzRelation extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
+class IbexaRelation extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
 {
     protected $contentMatcher;
 

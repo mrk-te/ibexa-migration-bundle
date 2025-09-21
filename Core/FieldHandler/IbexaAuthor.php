@@ -9,7 +9,7 @@ use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 /**
  * @todo is this needed at all ?
  */
-class EzAuthor extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaAuthor extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     /**
      * Creates a value object to use as the field value when setting an author field type.
