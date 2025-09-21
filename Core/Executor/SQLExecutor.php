@@ -104,25 +104,25 @@ class SQLExecutor extends AbstractExecutor
 
         $singleResult = ($this->expectedResultsType($step) == self::$RESULT_TYPE_SINGLE);
 
-        /** @var \Doctrine\DBAL\Driver\Statement $stmt */
+        /** @var \Doctrine\DBAL\Result $dbalResult */
         // NB: we can't use `query()` because of https://jira.ez.no/browse/EZEE-3345
-        $stmt = $conn->executeQuery($sql);
+        $dbalResult = $conn->executeQuery($sql);
         if ($singleResult) {
             // fetch only twice, to insure that we get only 1 row. This can save ram compared to fetching all rows
-            $result = $stmt->fetch();
+            $result = $dbalResult->fetchAssociative();
             if ($result === false) {
                 throw new InvalidMatchResultsNumberException('Found no results but expect one');
             }
-            if ($stmt->fetch() !== false) {
-                $stmt->closeCursor();
+            if ($dbalResult->fetchAssociative() !== false) {
+                $dbalResult->free();
                 throw new InvalidMatchResultsNumberException('Found two (or more) results but expect only one');
             }
-            $stmt->closeCursor();
+            $dbalResult->free();
             $result = array($result);
         } else {
             // fetch all rows
-            $result = $stmt->fetchAll();
-            $stmt->closeCursor();
+            $result = $dbalResult->fetchAllAssociative();
+            $dbalResult->free();
 
             $this->validateResultsCount($result, $step);
         }
