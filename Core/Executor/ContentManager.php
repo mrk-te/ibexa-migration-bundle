@@ -43,7 +43,7 @@ class ContentManager extends RepositoryExecutor implements MigrationGeneratorInt
     protected $sortConverter;
 
     // these are not exported when generating a migration
-    protected $ignoredStateGroupIdentifiers = array('ez_lock');
+    protected $ignoredStateGroupIdentifiers = array('ibexa_lock');
 
     public function __construct(
         ContentMatcher $contentMatcher,
