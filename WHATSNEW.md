@@ -1,6 +1,7 @@
 Version: 1.0.6
 ==============
 
+* Fixed: Option `remove_drafts: true` not woking on content_type / update if draft belongs to another user than `admin`
 * Added: support to import `ezimageasset` field type
 
 
