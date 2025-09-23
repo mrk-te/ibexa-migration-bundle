@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Value;
+namespace Kaliop\IbexaMigrationBundle\API\Value;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\PropertyNotFoundException;
 

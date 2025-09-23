@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Event;
+namespace Kaliop\IbexaMigrationBundle\API\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
 

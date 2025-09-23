@@ -13,26 +13,26 @@
         attribute4: >
                     value on multiple
                     lines, but new line is not preserved on parsing
-        # ezimage/ezbinaryfile/ezmedia  file attribute example
+        # ibexa_image/ibexa_binaryfile/ibexa_media  file attribute example
         attribute5:
             path: 'path/to/image' # Relative path from MigrationVersions/images/ or MigrationVersions/files/, MigrationVersions/media/ or absolute path
             alt_text: xyz # Optional, only used for images
             filename: abc # Optional, taken from the actual file if not specified
-            mime_type: def # DISCOURAGED. Optional. For ezbinaryfile and ezmedia only.
+            mime_type: def # DISCOURAGED. Optional. For ibexa_binaryfile and ibexa_media only.
                            # If not specified, the actual file is analyzed using the php function mime_content_type()
                            # NB: this seems to work only with eZPublish < 5.4 / 2014.11; it causes a bug in 2014.11,
                            # and started to be completely ignored in some later version...
                            # See bug https://github.com/kaliop-uk/ezmigrationbundle/issues/147
-            autoplay: false # Optional. For ezmedia only
-            loop: false # Optional. For ezmedia only
-            has_controller: false # Optional. For ezmedia only
-            width: 123 # Optional. For ezmedia only
-            height: 456 # Optional. For ezmedia only
-        # ezimage/ezbinaryfile/ezmedia file attribute example, using simplified form
+            autoplay: false # Optional. For ibexa_media only
+            loop: false # Optional. For ibexa_media only
+            has_controller: false # Optional. For ibexa_media only
+            width: 123 # Optional. For ibexa_media only
+            height: 456 # Optional. For ibexa_media only
+        # ibexa_image/ibexa_binaryfile/ibexa_media file attribute example, using simplified form
         attribute5b: '/path/to/image' # Relative path from MigrationVersions/images/ or MigrationVersions/files/ or MigrationVersions/media/, or absolute path
         # ezxmltext, showing an example of using references
         attribute6: '<section><paragraph><embed view="embed" size="medium" object_id="[reference:example_reference]" /></paragraph></section>'
-        # Adding values to an ezauthor field
+        # Adding values to an ibexa_author field
         attribute7:
             -
               name: Test Author
@@ -40,21 +40,21 @@
             -
               name: Another Author
               email: another@example.com
-        # Adding values to an ezobjectrelation field
+        # Adding values to an ibexa_object_relation field
         attribute8: x # content id or remote_id or string: reference:xxx
-        # Adding values to an ezobjectrelationlist field
+        # Adding values to an ibexa_object_relation_list field
         attribute9: [ x, reference:xxx ] # array of content ids or remote ids or reference strings
-        # ezurl, using 2 different syntaxes
+        # ibexa_url, using 2 different syntaxes
         attribute10: http://a/great/link
         attribute11:
             link: http://another/link
             text: the url text
-        # ezgmaplocation
+        # ibexa_gmap_location
         attribute12:
             latitude: 1.0
             longitude: 2.0
             address: 'Angel, London'
-        # ezgmaplocation - NULL value
+        # ibexa_gmap_location - NULL value
         attribute13:
             latitude: null
             longitude: null
@@ -66,14 +66,14 @@
             - remote_id: abc
             # this will add zero or more tags, matched by keyword
             - keyword: hello
-        # ezselection, multiple values
+        # ibexa_selection, multiple values
         attribute15: [ 1, "option 2" ] # array of selection options ids or textual values
-        # ezselection, single value
+        # ibexa_selection, single value
         attribute16: "option 3" # integer index or string
-        # ezcountry
-        attribute17: [IT, ESP, 41, Taiwan] # Either Alpha2, Alpha3, IDC or Name array of the countries, as defined in %ezpublish.fieldType.ezcountry.data%.
+        # ibexa_country
+        attribute17: [IT, ESP, 41, Taiwan] # Either Alpha2, Alpha3, IDC or Name array of the countries, as defined in %ezpublish.fieldType.ibexa_country.data%.
                                            # A single value can be provided also as string instead of array
-        # ezmatrix, both the ezplatform and community version
+        # ibexa_matrix, both the ezplatform and community version
         attribute18: # nb: the keys must match column identifiers
             - { authors: 'Author A, Author B', title: 'Lorem ipsum', release_info: '2012' }
             - { authors: 'Author 1, Author 2', title: 'Lorem ipsum dolor sit amet', release_info: 'R info abc' }

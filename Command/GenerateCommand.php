@@ -1,13 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\API\MatcherInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\Event\MigrationGeneratedEvent;
-use Kaliop\eZMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\API\MatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationGeneratedEvent;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -21,18 +23,20 @@ use Twig\Environment;
 /**
  * @todo allow passing in more context options, esp. for content/generate migrations
  */
+#[AsCommand(
+    name: 'kaliop:migration:generate',
+    description: 'Generate a blank migration definition file.',
+)]
 class GenerateCommand extends AbstractCommand
 {
     const DIR_CREATE_PERMISSIONS = 0755;
 
-    protected static $defaultName = 'kaliop:migration:generate';
-
     private $availableMigrationFormats = array('yml', 'php', 'sql', 'json');
     private $availableModes = array('create', 'update', 'delete');
     private $availableTypes = array('content', 'content_type', 'content_type_group', 'language', 'object_state', 'object_state_group', 'role', 'section', 'generic', 'db', 'php', '...');
-    private $thisBundle = 'eZMigrationBundle';
+    private $thisBundle = 'IbexaMigrationBundle';
 
-    protected $eventName = 'ez_migration.migration_generated';
+    protected $eventName = 'ibexa_migration.migration_generated';
     protected $eventDispatcher;
     protected $twig;
     protected $configResolver;
@@ -49,10 +53,9 @@ class GenerateCommand extends AbstractCommand
     /**
      * Configure the console command
      */
-    protected function configure()
+    protected function configure() :void
     {
         $this
-            ->setDescription('Generate a blank migration definition file.')
             ->addOption('format', null, InputOption::VALUE_REQUIRED, 'The format of migration file to generate (' . implode(', ', $this->availableMigrationFormats) . ')', 'yml')
             ->addOption('type', null, InputOption::VALUE_REQUIRED, 'The type of migration to generate (' . implode(', ', $this->availableTypes) . ')', '')
             ->addOption('mode', null, InputOption::VALUE_REQUIRED, 'The mode of the migration (' . implode(', ', $this->availableModes) . ')', 'create')
@@ -111,14 +114,14 @@ EOT
      *
      * @todo for type=db, we could fold 'dbserver' option into 'mode'
      */
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->setOutput($output);
         $this->setVerbosity($output->getVerbosity());
 
         if ($input->getOption('list-types')) {
             $this->listAvailableTypes($output);
-            return 0;
+            return Command::SUCCESS;
         }
 
         $bundleName = $input->getArgument('bundle');
@@ -239,7 +242,7 @@ EOT
             $output->writeln("<comment>$warning</comment>");
         }
 
-        return 0;
+        return Command::SUCCESS;
     }
 
     /**
@@ -347,7 +350,7 @@ EOT
     protected function getMigrationDirectory($bundleName)
     {
         if (!$bundleName) {
-            return $this->getApplication()->getKernel()->getProjectDir() . '/src/' . $this->configResolver->getParameter('ez_migration_bundle.version_directory');
+            return $this->getApplication()->getKernel()->getProjectDir() . '/src/' . $this->configResolver->getParameter('ibexa_migration_bundle.version_directory');
         }
 
         // Allow direct usage of a directory path instead of a bundle name
@@ -365,7 +368,7 @@ EOT
         }
 
         $bundle = $this->getApplication()->getKernel()->getBundle($bundleName);
-        $migrationDirectory = $bundle->getPath() . '/' . $this->configResolver->getParameter('ez_migration_bundle.version_directory');
+        $migrationDirectory = $bundle->getPath() . '/' . $this->configResolver->getParameter('ibexa_migration_bundle.version_directory');
 
         return $migrationDirectory;
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
 /**
  * Handles references to Contents. Supports remote Ids at the moment.

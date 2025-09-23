@@ -1,24 +1,24 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\API\EmbeddedReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\EmbeddedReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
 
-class EzRichText extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaRichText extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     public function setReferenceResolver(ReferenceResolverInterface $referenceResolver)
     {
         if (! $referenceResolver instanceof EmbeddedReferenceResolverInterface) {
-            throw new MigrationBundleException("Reference resolver injected into EzRichText field handler should implement EmbeddedReferenceResolverInterface");
+            throw new MigrationBundleException("Reference resolver injected into IbexaRichText field handler should implement EmbeddedReferenceResolverInterface");
         }
         parent::setReferenceResolver($referenceResolver);
     }
 
     /**
-     * Replaces any references in an xml string to be used as the input data for an ezrichtext field.
+     * Replaces any references in an xml string to be used as the input data for an ibexa_richtext field.
      *
      * @param string|array $fieldValue The definition of teh field value, structured in the yml file. Either a string, or an array with key 'content'
      * @param array $context The context for execution of the current migrations. Contains f.e. the path to the migration

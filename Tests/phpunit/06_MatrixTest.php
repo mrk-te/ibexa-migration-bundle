@@ -3,8 +3,8 @@
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
 use Ibexa\Contracts\Core\Repository\Translatable\ValidationError;
-use Kaliop\eZMigrationBundle\Tests\helper\BeforeStepExecutionListener;
-use Kaliop\eZMigrationBundle\Tests\helper\StepExecutedListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\BeforeStepExecutionListener;
+use Kaliop\IbexaMigrationBundle\Tests\helper\StepExecutedListener;
 
 /**
 * Tests the 'kaliop:migration:migrate' command for the Matrix field type
@@ -29,7 +29,7 @@ class MatrixTest extends MigrationExecutingTest
 
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath), '-n' => true, '-u' => true));
         // check that there are no notes after adding the migration
-        $this->assertRegexp('?\| ' . basename($filePath) . ' +\| +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath) . ' +\| +\|?', $output);
 
         // simplistic check on the event listeners having fired off correctly
         $this->assertGreaterThanOrEqual($count1 + 1, BeforeStepExecutionListener::getExecutions(), "Migration 'before step' listener did not fire");
@@ -40,7 +40,7 @@ class MatrixTest extends MigrationExecutingTest
 
     public function goodDSLProvider()
     {
-        $dslDir = $this->dslDir.'/ezmatrix/platform';
+        $dslDir = $this->dslDir.'/ibexa_matrix/platform';
 
         $out = array();
         foreach (scandir($dslDir) as $fileName) {

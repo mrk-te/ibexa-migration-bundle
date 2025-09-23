@@ -2,11 +2,11 @@
 
 include_once(__DIR__.'/MigrationExecutingTest.php');
 
-use Kaliop\eZMigrationBundle\API\ExecutorInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\ExecutorInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 class ExceptionsTest extends MigrationExecutingTest implements ExecutorInterface
 {
@@ -15,7 +15,7 @@ class ExceptionsTest extends MigrationExecutingTest implements ExecutorInterface
      */
     public function testMigrationCancelledException()
     {
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
         $ms->addExecutor($this);
 
         $md = new MigrationDefinition(
@@ -34,7 +34,7 @@ class ExceptionsTest extends MigrationExecutingTest implements ExecutorInterface
 
     public function testMigrationFailedException()
     {
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
         $ms->addExecutor($this);
 
         $md = new MigrationDefinition(
@@ -53,7 +53,7 @@ class ExceptionsTest extends MigrationExecutingTest implements ExecutorInterface
 
     public function testMigrationThrowingException()
     {
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
         $ms->addExecutor($this);
 
         $md = new MigrationDefinition(
@@ -80,7 +80,7 @@ class ExceptionsTest extends MigrationExecutingTest implements ExecutorInterface
     public function testInvalidUserAccountException()
     {
         //$bundles = $this->getBootedContainer()->getParameter('kernel.bundles');
-        $ms = $this->getBootedContainer()->get('ez_migration_bundle.migration_service');
+        $ms = $this->getBootedContainer()->get('ibexa_migration_bundle.migration_service');
 
         $filePath = $this->dslDir . '/misc/UnitTestOK801_loadSomething.yml';
 

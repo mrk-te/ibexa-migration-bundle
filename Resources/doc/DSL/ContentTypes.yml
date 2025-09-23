@@ -1,58 +1,58 @@
 # Possible settings and validator configurations for the different field types
 #
-# ezbinaryfile
+# ibexa_binaryfile
 #    validator-configuration:
 #        FileSizeValidator: { maxFileSize: false } # in MB
 #
-# ezcountry
+# ibexa_country
 #    field-settings:
 #        isMultiple: false
 #
-# ezdatetime
+# ibexa_datetime
 #    field-settings:
 #        defaultType: 0 # 1=default to current datetime
 #        useSeconds: false
 #        dateInterval: null
 #
-# ezdate
+# ibexa_date
 #    field-settings:
 #        defaultType: 0 # 1=default to current date
 #
-# ezemail
+# ibexa_email
 #    validator-configuration:
 #        EmailAddressValidator: {  }
 #
-# ezfloat
+# ibexa_float
 #    validator-configuration:
 #        FloatValueValidator: { minFloatValue: null, maxFloatValue: null }
 #
-# ezimage
+# ibexa_image
 #    validator-configuration:
 #        FileSizeValidator: { maxFileSize: false } # in MB
 #
-# ezinteger
+# ibexa_integer
 #    validator-configuration:
 #        IntegerValueValidator: { minIntegerValue: null, maxIntegerValue: null }
 #
-# ezmatrix
+# ibexa_matrix
 #    field-settings:
 #        minimum_rows: 0
 #        columns:
 #            - { identifier: colName }
 #
-# ezmedia
+# ibexa_media
 #    field-settings:
 #        mediaType: html5_video
 #    validator-configuration:
 #        FileSizeValidator: { maxFileSize: false } # in MB
 #
-# ezobjectrelation
+# ibexa_object_relation
 #    field-settings:
 #        selectionMethod: 0 # 1=drop-down list
 #        selectionRoot: null # location id
 #        selectionContentTypes: [ ] # array of ContentType identifiers; works since eZ Platform v1.11.0
 #
-# ezobjectrelationlist
+# ibexa_object_relation_list
 #    field-settings:
 #        selectionMethod: 0 # 1=drop-down list
 #        selectionDefaultLocation: 2
@@ -61,20 +61,20 @@
 #        RelationListValueValidator:
 #            selectionLimit: 1 # you can specify how many elements can be selected maximum
 #
-# ezselection
+# ibexa_selection
 #    field-settings:
 #        isMultiple: false
 #        options: [  ] # array of option names
 #
-# ezstring
+# ibexa_string
 #    validator-configuration:
 #          StringLengthValidator: { maxStringLength: false, minStringLength: false }
 #
-# eztext
+# ibexa_text
 #    field-settings:
 #        textRows: 10
 #
-# eztime
+# ibexa_time
 #    field-settings:
 #        defaultType: 0 # 1=default to current time
 #        useSeconds: false
@@ -135,7 +135,7 @@
                                    # For name and description, the language used will correspond to the 'lang' tag
                                    # It also supports attributes.$identifier.$field and complex expressions, such as f.e.
                                    # attributes.title.required (boolean value)
-                                   # attributes.ezobjectrelationlist."field-settings".selectionContentTypes.length(@) (nr. of cotent-types allowed in an object-relations field)
+                                   # attributes.ibexa_object_relation_list."field-settings".selectionContentTypes.length(@) (nr. of cotent-types allowed in an object-relations field)
                                    # (for the full syntax supported, see jmespath)
             overwrite: true|false # Optional, default false. If not set, and the reference already exists, an exception is thrown
     if: # Optional. If set, the migration step will be skipped unless the condition is matched
@@ -275,7 +275,7 @@
 # Object Relation List
         -
             identifier: class_identifier
-            type: ezobjectrelationlist
+            type: ibexa_object_relation_list
             name: Name
             description: Description of stuff
             required: false
@@ -292,7 +292,7 @@
 # Object Relation
         -
             identifier: image
-            type: ezobjectrelation
+            type: ibexa_object_relation
             name: Image
             description: The image to use for the article
             required: false

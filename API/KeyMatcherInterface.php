@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 interface KeyMatcherInterface extends MatcherInterface
 {
@@ -10,8 +10,8 @@ interface KeyMatcherInterface extends MatcherInterface
      *
      * @param string|int $key
      * @return mixed
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException
      */
     public function matchOneByKey($key);
 }

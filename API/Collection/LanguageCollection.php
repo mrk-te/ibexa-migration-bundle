@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Collection;
+namespace Kaliop\IbexaMigrationBundle\API\Collection;
 
 /**
  * @todo add phpdoc to suggest typehinting

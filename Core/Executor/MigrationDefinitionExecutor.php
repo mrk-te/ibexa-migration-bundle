@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use JmesPath\Env as JmesPath;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\MatcherInterface;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\API\ReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\MatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -22,7 +22,7 @@ class MigrationDefinitionExecutor extends AbstractExecutor
     protected $supportedStepTypes = array('migration_definition');
     protected $supportedActions = array('generate', 'save', 'include');
 
-    /** @var \Kaliop\eZMigrationBundle\Core\MigrationService $migrationService */
+    /** @var \Kaliop\IbexaMigrationBundle\Core\MigrationService $migrationService */
     protected $migrationService;
 
     public function __construct($migrationService, ReferenceResolverBagInterface $referenceResolver)

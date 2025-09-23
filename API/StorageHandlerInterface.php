@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
-use Kaliop\eZMigrationBundle\API\Collection\MigrationCollection;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationCollection;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 /**
  * Implemented by classes which store details of the executing/executed migrations

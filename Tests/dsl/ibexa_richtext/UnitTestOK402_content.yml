@@ -6,14 +6,14 @@
     content_type_group: 1
     identifier: kmb_test_402
     name: Kaliop Migration Bundle Test Class 402
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     is_container: true
     always_available: true
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
         -
             type: ezxmltext
             name: ezxmltext
@@ -29,7 +29,7 @@
     content_type: kmb_test_402
     parent_location: 2
     attributes:
-        ezstring: null
+        ibexa_string: null
         ezxmltext: null
     references:
         -   identifier: kmb_test_402_1
@@ -43,7 +43,7 @@
     priority: 1999
     remote_id: this_is_a_test_remoteid
     attributes:
-        - ezstring: hello world 4
+        - ibexa_string: hello world 4
         - ezxmltext:
             content: '<section><paragraph>Hello there! Here is an embedded object: <embed view="embed" size="medium" object_id="[reference:kmb_test_402_1]" /></paragraph></section>'
 

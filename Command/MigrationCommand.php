@@ -1,34 +1,37 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
 
 /**
  * Command to manipulate the available migrations / migration definitions.
  * @todo should we split off the actions used to manipulate migration defs into a separate command `MigrationDefinition` ?
  */
+#[AsCommand(
+    name: 'kaliop:migration:migration',
+    description: 'Manually modify or get info about migrations in the database table.',
+)]
 class MigrationCommand extends AbstractCommand
 {
-    protected static $defaultName = 'kaliop:migration:migration';
-
     /**
      * Set up the command.
      *
      * Define the name, options and help text.
      */
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
         $this
-            ->setDescription('Manually modify or get info about migrations in the database table.')
             ->addOption('delete', null, InputOption::VALUE_NONE, "Delete the specified migration.")
             ->addOption('info', null, InputOption::VALUE_NONE, "Get info about the specified migration.")
             ->addOption('add', null, InputOption::VALUE_NONE, "Add the specified migration definition.")
@@ -67,12 +70,12 @@ EOT
      * @param OutputInterface $output
      * @return int 0 if everything went fine, or an error code
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->setOutput($output);
         $this->setVerbosity($output->getVerbosity());
 
-        if (!$input->getOption('add') && !$input->getOption('delete') && !$input->getOption('skip') && 
+        if (!$input->getOption('add') && !$input->getOption('delete') && !$input->getOption('skip') &&
             !$input->getOption('info') && !$input->getOption('fail')) {
             throw new \InvalidArgumentException('You must specify whether you want to --add, --delete, --skip, --fail or --info the specified migration.');
         }
@@ -157,7 +160,7 @@ EOT
             }
 
             $output->writeln('');
-            return 0;
+            return Command::SUCCESS;
         }
 
         // ask user for confirmation to make changes
@@ -170,7 +173,7 @@ EOT
             )
             ) {
                 $output->writeln('<error>Migration change cancelled!</error>');
-                return 0;
+                return Command::SUCCESS;
             }
         }
 
@@ -195,7 +198,7 @@ EOT
                 $output->writeln('<info>Added migration ' . $migrationDefinition->path . '</info>');
             }
 
-            return 0;
+            return Command::SUCCESS;
         }
 
         if ($input->getOption('delete') || $input->getOption('fail')) {
@@ -215,7 +218,7 @@ EOT
                 $migrationService->failMigration($migration, $errorMessage);
             }
 
-            return 0;
+            return Command::SUCCESS;
         }
 
         if ($input->getOption('skip')) {
@@ -232,7 +235,7 @@ EOT
                 $output->writeln('<info>Migration ' . $migrationDefinition->path . ' marked as skipped</info>');
             }
 
-            return 0;
+            return Command::SUCCESS;
         }
 
         throw new \InvalidArgumentException("Please specify one action to be taken on the given migration");

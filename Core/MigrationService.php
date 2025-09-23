@@ -1,28 +1,28 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
 use Ibexa\Contracts\Core\Repository\Repository;
-use Kaliop\eZMigrationBundle\API\ReferenceBagInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\API\Collection\MigrationDefinitionCollection;
-use Kaliop\eZMigrationBundle\API\StorageHandlerInterface;
-use Kaliop\eZMigrationBundle\API\LoaderInterface;
-use Kaliop\eZMigrationBundle\API\DefinitionParserInterface;
-use Kaliop\eZMigrationBundle\API\ExecutorInterface;
-use Kaliop\eZMigrationBundle\API\ContextProviderInterface;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationStepExecutionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationAbortedException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationSuspendedException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationStepSkippedException;
-use Kaliop\eZMigrationBundle\API\Exception\AfterMigrationExecutionException;
-use Kaliop\eZMigrationBundle\API\Event\BeforeStepExecutionEvent;
-use Kaliop\eZMigrationBundle\API\Event\StepExecutedEvent;
-use Kaliop\eZMigrationBundle\API\Event\MigrationAbortedEvent;
-use Kaliop\eZMigrationBundle\API\Event\MigrationSuspendedEvent;
+use Kaliop\IbexaMigrationBundle\API\ReferenceBagInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationDefinitionCollection;
+use Kaliop\IbexaMigrationBundle\API\StorageHandlerInterface;
+use Kaliop\IbexaMigrationBundle\API\LoaderInterface;
+use Kaliop\IbexaMigrationBundle\API\DefinitionParserInterface;
+use Kaliop\IbexaMigrationBundle\API\ExecutorInterface;
+use Kaliop\IbexaMigrationBundle\API\ContextProviderInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationStepExecutionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationAbortedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationSuspendedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationStepSkippedException;
+use Kaliop\IbexaMigrationBundle\API\Exception\AfterMigrationExecutionException;
+use Kaliop\IbexaMigrationBundle\API\Event\BeforeStepExecutionEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\StepExecutedEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationAbortedEvent;
+use Kaliop\IbexaMigrationBundle\API\Event\MigrationSuspendedEvent;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
@@ -66,7 +66,7 @@ class MigrationService implements ContextProviderInterface
      */
     protected $contextHandler;
 
-    protected $eventPrefix = 'ez_migration.';
+    protected $eventPrefix = 'ibexa_migration.';
 
     protected $eventEntity = 'migration';
 
@@ -169,7 +169,7 @@ class MigrationService implements ContextProviderInterface
      *
      * @param int $limit 0 or below will be treated as 'no limit'
      * @param int $offset
-     * @return \Kaliop\eZMigrationBundle\API\Collection\MigrationCollection
+     * @return \Kaliop\IbexaMigrationBundle\API\Collection\MigrationCollection
      */
     public function getMigrations($limit = null, $offset = null)
     {
@@ -182,7 +182,7 @@ class MigrationService implements ContextProviderInterface
      * @param int $status
      * @param int $limit 0 or below will be treated as 'no limit'
      * @param int $offset
-     * @return \Kaliop\eZMigrationBundle\API\Collection\MigrationCollection
+     * @return \Kaliop\IbexaMigrationBundle\API\Collection\MigrationCollection
      */
     public function getMigrationsByStatus($status, $limit = null, $offset = null)
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\API\ReferenceResolverBagInterface;
-use Kaliop\eZMigrationBundle\API\EnumerableReferenceResolverInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\ContextProviderInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverBagInterface;
+use Kaliop\IbexaMigrationBundle\API\EnumerableReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ContextProviderInterface;
 
 /**
  * Handle 'any' references by letting the developer store them and retrieve them afterwards

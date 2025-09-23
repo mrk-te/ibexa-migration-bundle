@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Collection\LocationCollection;
-use Kaliop\eZMigrationBundle\API\Collection\TrashedItemCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\Core\Matcher\TrashMatcher;
-use Kaliop\eZMigrationBundle\Core\Helper\SortConverter;
+use Kaliop\IbexaMigrationBundle\API\Collection\LocationCollection;
+use Kaliop\IbexaMigrationBundle\API\Collection\TrashedItemCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\TrashMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Helper\SortConverter;
 
 /**
  * Handles trash migrations.

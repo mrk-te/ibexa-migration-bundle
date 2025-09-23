@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\StorageHandler\Database;
+namespace Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database;
 
 use Doctrine\DBAL\Exception\DriverException;
 use Doctrine\DBAL\Schema\Schema;
-use Kaliop\eZMigrationBundle\API\ContextStorageHandlerInterface;
+use Kaliop\IbexaMigrationBundle\API\ContextStorageHandlerInterface;
 
 class Context extends TableStorage implements ContextStorageHandlerInterface
 {

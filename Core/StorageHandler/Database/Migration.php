@@ -1,19 +1,19 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\StorageHandler\Database;
+namespace Kaliop\IbexaMigrationBundle\Core\StorageHandler\Database;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Exception\DriverException;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use Doctrine\DBAL\Query\Expression\CompositeExpression;
 use Doctrine\DBAL\Schema\Schema;
-use Kaliop\eZMigrationBundle\API\StorageHandlerInterface;
-use Kaliop\eZMigrationBundle\API\Collection\MigrationCollection;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Value\Migration as APIMigration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\StorageHandlerInterface;
+use Kaliop\IbexaMigrationBundle\API\Collection\MigrationCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration as APIMigration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface;
 
 /**
  * Database-backed storage for info on executed migrations
@@ -444,7 +444,7 @@ class Migration extends TableStorage implements StorageHandlerInterface
         $t->addColumn('path', 'string', array('length' => 4000));
         $t->addColumn('md5', 'string', array('length' => 32));
         $t->addColumn('execution_date', 'integer', array('notnull' => false));
-        $t->addColumn('status', 'integer', array('default ' => APIMigration::STATUS_TODO));
+        $t->addColumn('status', 'integer', array('Default' => APIMigration::STATUS_TODO));
         $t->addColumn('execution_error', 'string', array('length' => 4000, 'notnull' => false));
         $t->setPrimaryKey(array('migration'));
         // in case users want to look up migrations by their full path

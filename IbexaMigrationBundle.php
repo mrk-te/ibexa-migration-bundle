@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle;
+namespace Kaliop\IbexaMigrationBundle;
 
-use Kaliop\eZMigrationBundle\DependencyInjection\CompilerPass\TaggedServicesCompilerPass;
+use Kaliop\IbexaMigrationBundle\DependencyInjection\CompilerPass\TaggedServicesCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class eZMigrationBundle extends Bundle
+class IbexaMigrationBundle extends Bundle
 {
     public function build(ContainerBuilder $container)
     {

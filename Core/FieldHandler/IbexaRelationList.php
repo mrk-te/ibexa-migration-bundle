@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\RelationList\Value;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
-class EzRelationList extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaRelationList extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     protected $contentMatcher;
 

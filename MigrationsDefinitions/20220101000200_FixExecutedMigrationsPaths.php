@@ -1,10 +1,10 @@
 <?php
 
 use Doctrine\DBAL\Connection;
-use Kaliop\eZMigrationBundle\API\MigrationInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
 /**
  * Make paths of all executed migrations relative, if possible
@@ -30,12 +30,12 @@ class FixExecutedMigrationsPaths implements MigrationInterface
 
     private function goForIt()
     {
-        $this->migrationsTableName = $this->container->getParameter('ez_migration_bundle.table_name');
+        $this->migrationsTableName = $this->container->getParameter('ibexa_migration_bundle.table_name');
 
         $this->connection = $this->container->get('ibexa.persistence.connection');
 
-        /** @var \Kaliop\eZMigrationBundle\Core\Helper\ConsoleIO $io */
-        $io = $this->container->get('ez_migration_bundle.helper.console_io');
+        /** @var \Kaliop\IbexaMigrationBundle\Core\Helper\ConsoleIO $io */
+        $io = $this->container->get('ibexa_migration_bundle.helper.console_io');
         // NB: in theory this could be null!
         $output = $io->getOutput();
 

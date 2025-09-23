@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
-use Kaliop\eZMigrationBundle\API\Exception\MigrationStepSkippedException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationStepSkippedException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
 
 trait IgnorableStepExecutorTrait
 {

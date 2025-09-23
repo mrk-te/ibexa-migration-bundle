@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\Core\Matcher\LocationMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\LocationMatcher;
 
 /**
  * Handles references to locations. At the moment: supports remote Ids.

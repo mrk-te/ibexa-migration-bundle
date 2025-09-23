@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Helper;
+namespace Kaliop\IbexaMigrationBundle\Core\Helper;
 
 use Ibexa\Contracts\Core\Repository\Values\Content\Location;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 
 class SortConverter
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\TagMatcher;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\TagMatcher;
 
-class EzTags extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaTags extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     protected $tagMatcher;
 
@@ -29,7 +29,7 @@ class EzTags extends AbstractFieldHandler implements FieldValueImporterInterface
         foreach ($fieldValue as $def)
         {
             if (!is_array($def) || count($def) != 1) {
-                throw new InvalidStepDefinitionException('Definition of EzTags field is incorrect: each element of the tags array must be an array with one element');
+                throw new InvalidStepDefinitionException('Definition of IbexaTags field is incorrect: each element of the tags array must be an array with one element');
             }
 
             # @todo support single-value elements too? if numeric, it is a tag id, if it is a string it is... what?

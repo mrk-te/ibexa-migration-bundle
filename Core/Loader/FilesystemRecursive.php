@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Loader;
+namespace Kaliop\IbexaMigrationBundle\Core\Loader;
 
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
 /**
  * Similar to parent, except that, given a folder, we scan all of its subfolders

@@ -1,14 +1,14 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Contracts\Core\Repository\Repository;
 use Ibexa\Core\FieldType\Selection\Value as SelectionValue;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\API\FieldDefinitionConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldDefinitionConverterInterface;
 
-class EzSelection extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
+class IbexaSelection extends AbstractFieldHandler implements FieldValueImporterInterface, FieldDefinitionConverterInterface
 {
     protected $repository;
 

@@ -1,15 +1,17 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\Core\EventListener\TracingStepExecutedListener;
-use Kaliop\eZMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\Core\EventListener\TracingStepExecutedListener;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Attribute\AsCommand;
 
 /**
  * Command to resume suspended migrations.
@@ -17,10 +19,12 @@ use Symfony\Component\HttpKernel\KernelInterface;
  * @todo add support for resuming a set based on path
  * @todo add support for the separate-process cli switch, as well as clear-cache, default-language, force-sigchild-enabled, survive-disconnected-tty
  */
+#[AsCommand(
+    name: 'kaliop:migration:resume',
+    description: 'Restarts any suspended migrations.',
+)]
 class ResumeCommand extends AbstractCommand
 {
-    protected static $defaultName = 'kaliop:migration:resume';
-
     protected $stepExecutedListener;
 
     public function __construct(MigrationService $migrationService, TracingStepExecutedListener $stepExecutedListener,
@@ -35,12 +39,11 @@ class ResumeCommand extends AbstractCommand
      *
      * Define the name, options and help text.
      */
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
         $this
-            ->setDescription('Restarts any suspended migrations.')
             ->addOption('ignore-failures', 'i', InputOption::VALUE_NONE, "Keep resuming migrations even if one fails")
             ->addOption('no-interaction', 'n', InputOption::VALUE_NONE, "Do not ask any interactive question.")
             ->addOption('no-transactions', 'u', InputOption::VALUE_NONE, "Do not use a repository transaction to wrap each migration. Unsafe, but needed for legacy slot handlers")
@@ -60,7 +63,7 @@ EOT
      * @return int 0 if everything went fine, or an error code
      * @throws \Exception
      */
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $start = microtime(true);
 
@@ -91,7 +94,7 @@ EOT
 
         if (!count($suspendedMigrations)) {
             $output->writeln('Nothing to do');
-            return 0;
+            return Command::SUCCESS;
         }
 
         // ask user for confirmation to make changes
@@ -104,7 +107,7 @@ EOT
             )
             ) {
                 $output->writeln('<error>Migration resuming cancelled!</error>');
-                return 0;
+                return Command::SUCCESS;
             }
         }
 
@@ -157,6 +160,6 @@ EOT
             return 2;
         }
 
-        return 0;
+        return Command::SUCCESS;
     }
 }

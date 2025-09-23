@@ -1,3 +1,22 @@
+Version: 2.0.0
+==============
+
+* Changed: Rename classes prefixed with `Ez*` to `Ibexa*`
+* Changed: Update namespace `\EzSystems\EzPlatformMatrixFieldtype\` to `\Ibexa\FieldTypeMatrix\`
+* Changed: Update \Kaliop\IbexaMigrationBundle\Core\Process\Process to Symfony 7
+* Changed: Update Doctrine\DBAL calls to Symfony 7
+* Changed: PHPParser instanciation
+* Changed: Rename `ez_lock` to `ibexa_lock`
+* Fixed: [Tests] Fix access to the container on Symfony 7
+* Changed: Rename `ez_lock` to `ibexa_lock`
+* Changed: Rename field types `ez*` to `ibexa_*`
+* Changed: Rename `eZMigrationExtension` to `IbexaMigrationExtension`
+* Changed: Rename `eZMigrationBundle` to `IbexaMigrationBundle`
+* Changed: Rename all elements prefixed with `ez_migration*` to `ibexa_migration*`
+* Added: Support for Ibexa 5.0 / Symfony 7
+* Removed: Operation `type: mail / mode: send` and dependency to SwiftMailer. Use `type: service / mode: call` instead.
+
+
 Version: 1.0.6
 ==============
 

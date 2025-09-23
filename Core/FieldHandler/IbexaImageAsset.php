@@ -1,12 +1,12 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\ImageAsset\Value;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\ContentMatcher;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ContentMatcher;
 
-class EzImageAsset extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaImageAsset extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     protected $contentMatcher;
 

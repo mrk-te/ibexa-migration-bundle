@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 interface MatcherInterface
 {
@@ -14,7 +14,7 @@ interface MatcherInterface
      *
      * @param array $conditions
      * @return array|\ArrayObject
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException
      *
      * @todo shall we add as 2nd argument: $tolerateMisses = false ? (note that it would affect child interfaces)
      * @todo expand return type to include ArrayIterator
@@ -26,8 +26,8 @@ interface MatcherInterface
      *
      * @param array $conditions
      * @return mixed
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchConditionsException
-     * @throws \Kaliop\eZMigrationBundle\API\Exception\InvalidMatchResultsNumberException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchConditionsException
+     * @throws \Kaliop\IbexaMigrationBundle\API\Exception\InvalidMatchResultsNumberException
      */
     public function matchOne(array $conditions);
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Helper;
+namespace Kaliop\IbexaMigrationBundle\Core\Helper;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\ConfigResolverInterface as KMBConfigResolverInterface;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\ConfigResolverInterface as KMBConfigResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
 
 /**
  * Helps with BC: allows a parameter to be defined either as dynamic (siteaccess-aware) or as simple Sf parameter

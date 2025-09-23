@@ -1,10 +1,10 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Event;
+namespace Kaliop\IbexaMigrationBundle\API\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use Kaliop\eZMigrationBundle\API\Value\MigrationStep;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationSuspendedException;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationStep;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationSuspendedException;
 
 class MigrationSuspendedEvent extends Event
 {

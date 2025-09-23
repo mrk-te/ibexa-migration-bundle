@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
-use Kaliop\eZMigrationBundle\API\ReferenceResolverInterface;
+use Kaliop\IbexaMigrationBundle\API\ReferenceResolverInterface;
 
 interface RegexpBasedResolverInterface extends ReferenceResolverInterface
 {

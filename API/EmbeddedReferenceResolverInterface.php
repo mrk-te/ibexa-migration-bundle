@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API;
+namespace Kaliop\IbexaMigrationBundle\API;
 
 /**
  * Used to resolve references 'embedded' inside strings (as opposed to references which completely replace strings).

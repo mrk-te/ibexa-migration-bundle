@@ -6,108 +6,108 @@
     content_type_group: 1
     identifier: kmb_test_004
     name: Kaliop Migration Bundle Test Class 2
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     is_container: true
     always_available: true
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
         -
-            type: ezauthor
-            name: ezauthor
-            identifier: ezauthor
+            type: ibexa_author
+            name: ibexa_author
+            identifier: ibexa_author
         -
-            type: ezbinaryfile
-            name: ezbinaryfile
-            identifier: ezbinaryfile
+            type: ibexa_binaryfile
+            name: ibexa_binaryfile
+            identifier: ibexa_binaryfile
         -
-            type: ezboolean
-            name: ezboolean
-            identifier: ezboolean
+            type: ibexa_boolean
+            name: ibexa_boolean
+            identifier: ibexa_boolean
         -
-            type: ezcountry
-            name: ezcountry
-            identifier: ezcountry
+            type: ibexa_country
+            name: ibexa_country
+            identifier: ibexa_country
             field-settings:
                 isMultiple: true
         -
-            type: ezdatetime
-            name: ezdatetime
-            identifier: ezdatetime
+            type: ibexa_datetime
+            name: ibexa_datetime
+            identifier: ibexa_datetime
         -
-            type: ezdate
-            name: ezdate
-            identifier: ezdate
+            type: ibexa_date
+            name: ibexa_date
+            identifier: ibexa_date
         -
-            type: ezemail
-            name: ezemail
-            identifier: ezemail
+            type: ibexa_email
+            name: ibexa_email
+            identifier: ibexa_email
         -
-            type: ezfloat
-            name: ezfloat
-            identifier: ezfloat
-        # @todo ezgmaplocation fieldType seems to be enabled by default, but the db table might *not* be present...
+            type: ibexa_float
+            name: ibexa_float
+            identifier: ibexa_float
+        # @todo ibexa_gmap_location fieldType seems to be enabled by default, but the db table might *not* be present...
         #-
-        #    type: ezgmaplocation
-        #    name: ezgmaplocation
-        #    identifier: ezgmaplocation
+        #    type: ibexa_gmap_location
+        #    name: ibexa_gmap_location
+        #    identifier: ibexa_gmap_location
         -
-            type: ezimage
-            name: ezimage
-            identifier: ezimage
+            type: ibexa_image
+            name: ibexa_image
+            identifier: ibexa_image
         -
-            type: ezinteger
-            name: ezinteger
-            identifier: ezinteger
+            type: ibexa_integer
+            name: ibexa_integer
+            identifier: ibexa_integer
         -
-            type: ezisbn
-            name: ezisbn
-            identifier: ezisbn
+            type: ibexa_isbn
+            name: ibexa_isbn
+            identifier: ibexa_isbn
         -
-            type: ezkeyword
-            name: ezkeyword
-            identifier: ezkeyword
+            type: ibexa_keyword
+            name: ibexa_keyword
+            identifier: ibexa_keyword
         -
-            type: ezmedia
-            name: ezmedia
-            identifier: ezmedia
+            type: ibexa_media
+            name: ibexa_media
+            identifier: ibexa_media
         -
-            type: ezobjectrelation
-            name: ezobjectrelation
-            identifier: ezobjectrelation
+            type: ibexa_object_relation
+            name: ibexa_object_relation
+            identifier: ibexa_object_relation
         -
-            type: ezobjectrelationlist
-            name: ezobjectrelationlist
-            identifier: ezobjectrelationlist
+            type: ibexa_object_relation_list
+            name: ibexa_object_relation_list
+            identifier: ibexa_object_relation_list
         -
-            type: ezrichtext
-            name: ezrichtext
-            identifier: ezrichtext
+            type: ibexa_richtext
+            name: ibexa_richtext
+            identifier: ibexa_richtext
         # nb: ezsrrating fieldType seems to be enabled by default, but the db table might *not* be present...
         #-
         #    type: ezsrrating
         #    name: ezsrrating
         #    identifier: ezsrrating
         -
-            type: eztext
-            name: eztext
-            identifier: eztext
+            type: ibexa_text
+            name: ibexa_text
+            identifier: ibexa_text
         -
-            type: eztime
-            name: eztime
-            identifier: eztime
+            type: ibexa_time
+            name: ibexa_time
+            identifier: ibexa_time
         -
-            type: ezurl
-            name: ezurl
-            identifier: ezurl
-        # @todo an ezuser field can not be null on content creation (bad sql generated...), so we disable it here.
+            type: ibexa_url
+            name: ibexa_url
+            identifier: ibexa_url
+        # @todo an ibexa_user field can not be null on content creation (bad sql generated...), so we disable it here.
         #       Move to a separate test
         #-
-        #    type: ezuser
-        #    name: ezuser
-        #    identifier: ezuser
+        #    type: ibexa_user
+        #    name: ibexa_user
+        #    identifier: ibexa_user
     references:
         -
             identifier: kmb_test_004
@@ -123,7 +123,7 @@
     section: 3
     owner: admin
     attributes:
-        - ezstring: hello world 1
+        - ibexa_string: hello world 1
     object_states:
         - locked
     references:
@@ -241,9 +241,9 @@
         identifier: kmb_test_004
     attributes:
         -
-            type: ezobjectrelationlist
-            name: ezobjectrelationlist
-            identifier: ezobjectrelationlist
+            type: ibexa_object_relation_list
+            name: ibexa_object_relation_list
+            identifier: ibexa_object_relation_list
             field-settings:
                 selectionDefaultLocation: reference:kmb_test_004_1_loc
 
@@ -253,9 +253,9 @@
     content_type: reference:kmb_test_004
     parent_location: 2
     attributes:
-        - ezstring: hello world 2
-        - ezobjectrelation: 'reference:kmb_test_004_1'
-        - ezobjectrelationlist: [ 'reference:kmb_test_004_1' ]
+        - ibexa_string: hello world 2
+        - ibexa_object_relation: 'reference:kmb_test_004_1'
+        - ibexa_object_relation_list: [ 'reference:kmb_test_004_1' ]
     references:
         -
             identifier: kmb_test_004_2
@@ -275,29 +275,29 @@
     publication_date: "2005:08:09 18:11:31"
     version_creator: anonymous
     attributes:
-        ezstring: hello world 3
+        ibexa_string: hello world 3
         # Issue # 224
-        ezcountry: ALB
+        ibexa_country: ALB
     references:
         -
             identifier: kmb_test_004_3
             attribute: object_id
         -
-            identifier: kmb_test_004_3_ezcountry
-            attribute: 'attributes.ezcountry[0]'
+            identifier: kmb_test_004_3_ibexa_country
+            attribute: 'attributes.ibexa_country[0]'
             overwrite: true
 
 -
     type: assert
     target: reference
-    identifier: reference:kmb_test_004_3_ezcountry
+    identifier: reference:kmb_test_004_3_ibexa_country
     test:
         equals: AL
 
 -
     type: reference
     mode: set
-    identifier: kmb_test_004_3_ezcountry_set
+    identifier: kmb_test_004_3_ibexa_country_set
     value: [ AFG ]
 
 -
@@ -306,24 +306,24 @@
     match:
         location_remote_id: kmb_test_004_3_location_remote_id
     attributes:
-        ezcountry: reference:kmb_test_004_3_ezcountry_set
+        ibexa_country: reference:kmb_test_004_3_ibexa_country_set
     references:
         -
-            identifier: kmb_test_004_3_ezcountry
-            attribute: 'attributes.ezcountry[0]'
+            identifier: kmb_test_004_3_ibexa_country
+            attribute: 'attributes.ibexa_country[0]'
             overwrite: true
 
 -
     type: assert
     target: reference
-    identifier: reference:kmb_test_004_3_ezcountry
+    identifier: reference:kmb_test_004_3_ibexa_country
     test:
         equals: AF
 
 -
     type: reference
     mode: set
-    identifier: kmb_test_004_3_ezcountry_set
+    identifier: kmb_test_004_3_ibexa_country_set
     overwrite: true
     value: Algeria
 
@@ -333,17 +333,17 @@
     match:
         location_remote_id: kmb_test_004_3_location_remote_id
     attributes:
-        ezcountry: [ 'reference:kmb_test_004_3_ezcountry_set' ]
+        ibexa_country: [ 'reference:kmb_test_004_3_ibexa_country_set' ]
     references:
         -
-            identifier: kmb_test_004_3_ezcountry
-            attribute: 'attributes.ezcountry[0]'
+            identifier: kmb_test_004_3_ibexa_country
+            attribute: 'attributes.ibexa_country[0]'
             overwrite: true
 
 -
     type: assert
     target: reference
-    identifier: reference:kmb_test_004_3_ezcountry
+    identifier: reference:kmb_test_004_3_ibexa_country
     test:
         equals: DZ
 
@@ -354,9 +354,9 @@
         identifier: kmb_test_004
     attributes:
         -
-            type: ezobjectrelationlist
-            name: ezobjectrelationlist
-            identifier: ezobjectrelationlist
+            type: ibexa_object_relation_list
+            name: ibexa_object_relation_list
+            identifier: ibexa_object_relation_list
             field-settings:
                 selectionDefaultLocation: location:kmb_test_004_3_location_remote_id
 
@@ -368,40 +368,40 @@
     priority: 1999
     remote_id: this_is_a_test_remoteid
     attributes:
-        - ezstring: hello world 4
-        - ezimage:
+        - ibexa_string: hello world 4
+        - ibexa_image:
             path: blank.jpg
             alt_text: a blank 1x1 px image
             filename: lol1.jpg
-        - ezbinaryfile:
+        - ibexa_binaryfile:
             path: emptyfile.txt
             filename: lol2.txt
-        - ezmedia:
+        - ibexa_media:
             path: small.flv
             filename: lol3.flv
-        - ezrichtext:
+        - ibexa_richtext:
             content: '<?xml version="1.0" encoding="UTF-8"?><section xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ezxhtml="http://ez.no/xmlns/ezpublish/docbook/xhtml" xmlns:ezcustom="http://ez.no/xmlns/ezpublish/docbook/custom" version="5.0-variant ezpublish-1.0"><para><link xlink:href="ezcontent://[reference:kmb_test_004_1]">Content link</link></para></section>'
-        - ezauthor:
+        - ibexa_author:
             -
                 name: Author 1
                 email: test1@example.com
             -
                 name: Author 2
                 email: test2@example.com
-        - ezcountry:
+        - ibexa_country:
             - Afghanistan
             - AX
             - ALB
-        - ezobjectrelation:
+        - ibexa_object_relation:
             destinationContentId: 'reference:kmb_test_004_1'
-        - ezobjectrelationlist:
+        - ibexa_object_relation_list:
             destinationContentIds: [ 'reference:kmb_test_004_1', 'reference:kmb_test_004_2' ]
 # Currently fails... :-(
 # Error message: Argument 'BinaryFile::id' is invalid: '/content/download/55/249' is wrong value, it does not contain prefix '/var/behat_site/storage/'. Is 'var_dir' config correct?
 #    references:
 #        -
 #            identifier: kmb_test_004_10_mimetype
-#            attribute: attributes.ezbinaryfile.mimeType
+#            attribute: attributes.ibexa_binaryfile.mimeType
 
 # Currently fails... See: https://github.com/kaliop-uk/ezmigrationbundle/issues/147
 #-
@@ -417,27 +417,27 @@
     content_type: kmb_test_004
     parent_location: 2
     attributes:
-        ezstring: null
-        ezauthor: null
-        ezbinaryfile: null
-        ezboolean: null
-        ezcountry: null
-        ezdatetime: null
-        ezdate: null
-        ezemail: null
-        ezfloat: null
-        ezimage: null
-        ezinteger: null
-        ezisbn: null
-        ezkeyword: null
-        ezmedia: null
-        ezobjectrelation: null
-        ezobjectrelationlist: null
-        ezrichtext: null
-        eztext: null
-        eztime: null
-        ezurl: null
-        #ezuser: null
+        ibexa_string: null
+        ibexa_author: null
+        ibexa_binaryfile: null
+        ibexa_boolean: null
+        ibexa_country: null
+        ibexa_datetime: null
+        ibexa_date: null
+        ibexa_email: null
+        ibexa_float: null
+        ibexa_image: null
+        ibexa_integer: null
+        ibexa_isbn: null
+        ibexa_keyword: null
+        ibexa_media: null
+        ibexa_object_relation: null
+        ibexa_object_relation_list: null
+        ibexa_richtext: null
+        ibexa_text: null
+        ibexa_time: null
+        ibexa_url: null
+        #ibexa_user: null
 
 -
     type: content
@@ -445,8 +445,8 @@
     match:
         content_id: reference:kmb_test_004_1
     attributes:
-        - ezimage: blank.jpg
-        - ezbinaryfile: emptyfile.txt
+        - ibexa_image: blank.jpg
+        - ibexa_binaryfile: emptyfile.txt
     section: users
     version_creator: 14
     owner: 10
@@ -510,7 +510,7 @@
     match:
         and:
             - attribute:
-                ezstring:
+                ibexa_string:
                     eq: 'hello world 1'
             - content_id: reference:kmb_test_004_1
             - content_remote_id: this_is_a_very_unlikely_remoteid

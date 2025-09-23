@@ -1,9 +1,9 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\DefinitionParser;
+namespace Kaliop\IbexaMigrationBundle\Core\DefinitionParser;
 
-use Kaliop\eZMigrationBundle\API\DefinitionParserInterface;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\DefinitionParserInterface;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 
 /**
  * Handles Json migration definitions.

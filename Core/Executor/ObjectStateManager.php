@@ -1,15 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\Executor;
+namespace Kaliop\IbexaMigrationBundle\Core\Executor;
 
 use Ibexa\Contracts\Core\Repository\Values\ObjectState\ObjectState;
-use Kaliop\eZMigrationBundle\API\Collection\ObjectStateCollection;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidStepDefinitionException;
-use Kaliop\eZMigrationBundle\API\Exception\MigrationBundleException;
-use Kaliop\eZMigrationBundle\API\EnumerableMatcherInterface;
-use Kaliop\eZMigrationBundle\API\MigrationGeneratorInterface;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
-use Kaliop\eZMigrationBundle\Core\Matcher\ObjectStateMatcher;
+use Kaliop\IbexaMigrationBundle\API\Collection\ObjectStateCollection;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidStepDefinitionException;
+use Kaliop\IbexaMigrationBundle\API\Exception\MigrationBundleException;
+use Kaliop\IbexaMigrationBundle\API\EnumerableMatcherInterface;
+use Kaliop\IbexaMigrationBundle\API\MigrationGeneratorInterface;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateGroupMatcher;
+use Kaliop\IbexaMigrationBundle\Core\Matcher\ObjectStateMatcher;
 
 /**
  * Handles object-state migrations.

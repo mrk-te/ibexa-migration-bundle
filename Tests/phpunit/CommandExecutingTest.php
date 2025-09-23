@@ -92,7 +92,7 @@ abstract class CommandExecutingTest extends KernelTestCase
             throw new \RuntimeException($e->getMessage() . " Did you forget to define the environment variable KERNEL_CLASS?", $e->getCode(), $e->getPrevious());
         }
 
-        return static::$container;
+        return static::getContainer();
     }
 
     protected function getBootedContainer()

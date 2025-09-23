@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\Core\MigrationService;
+use Kaliop\IbexaMigrationBundle\Core\MigrationService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
@@ -16,14 +16,12 @@ abstract class AbstractCommand extends Command
     /**
      * @var MigrationService
      */
-    private $migrationService;
+    private MigrationService $migrationService;
 
-    protected $kernel;
-    /** @var OutputInterface $output */
-    protected $output;
-    /** @var OutputInterface $output */
-    protected $errOutput;
-    protected $verbosity = OutputInterface::VERBOSITY_NORMAL;
+    protected KernelInterface $kernel;
+    protected OutputInterface $output;
+    protected OutputInterface $errOutput;
+    protected int $verbosity = OutputInterface::VERBOSITY_NORMAL;
 
     public function __construct(MigrationService $migrationService, KernelInterface $kernel)
     {
@@ -33,15 +31,12 @@ abstract class AbstractCommand extends Command
         parent::__construct();
     }
 
-    /**
-     * @return MigrationService
-     */
-    public function getMigrationService()
+    public function getMigrationService(): MigrationService
     {
         return $this->migrationService;
     }
 
-    protected function setOutput(OutputInterface $output)
+    protected function setOutput(OutputInterface $output): void
     {
         $this->output = $output;
         $this->errOutput = $output instanceof ConsoleOutputInterface ? $output->getErrorOutput() : $output;
@@ -60,7 +55,7 @@ abstract class AbstractCommand extends Command
      * @param int $verbosity
      * @param int $type
      */
-    protected function writeln($message, $verbosity = OutputInterface::VERBOSITY_NORMAL, $type = OutputInterface::OUTPUT_NORMAL)
+    protected function writeln($message, int $verbosity = OutputInterface::VERBOSITY_NORMAL, int $type = OutputInterface::OUTPUT_NORMAL): void
     {
         if ($this->verbosity >= $verbosity) {
             $this->output->writeln($message, $type);
@@ -72,7 +67,7 @@ abstract class AbstractCommand extends Command
      * @param int $verbosity
      * @param int $type
      */
-    protected function writeErrorln($message, $verbosity = OutputInterface::VERBOSITY_QUIET, $type = OutputInterface::OUTPUT_NORMAL)
+    protected function writeErrorln($message, int $verbosity = OutputInterface::VERBOSITY_QUIET, int $type = OutputInterface::OUTPUT_NORMAL): void
     {
         if ($this->verbosity >= $verbosity) {
 
@@ -97,7 +92,7 @@ abstract class AbstractCommand extends Command
      * @param string[] $paths
      * @return string[]
      */
-    protected function normalizePaths($paths)
+    protected function normalizePaths(array $paths): array
     {
         $rootDir = realpath($this->kernel->getProjectDir()) . '/';
         foreach ($paths as $i => $path) {

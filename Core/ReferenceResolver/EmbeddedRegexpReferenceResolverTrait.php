@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\ReferenceResolver;
+namespace Kaliop\IbexaMigrationBundle\Core\ReferenceResolver;
 
 /**
  * Used to turn regexp-based matchers (which do match whole strings) into embedded-matchers (used to match parts of strings).

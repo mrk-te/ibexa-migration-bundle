@@ -1,13 +1,15 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Command;
+namespace Kaliop\IbexaMigrationBundle\Command;
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
-use Kaliop\eZMigrationBundle\API\Value\MigrationDefinition;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\MigrationDefinition;
 use Symfony\Component\Console\Helper\Table;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Attribute\AsCommand;
 
 /**
  * Command to display the status of migrations.
@@ -15,16 +17,19 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @todo add option to skip displaying already executed migrations
  * @todo allow sorting migrations by their execution date
  */
+#[AsCommand(
+    name: 'kaliop:migration:status',
+    description: 'View the status of all (or a set of) migrations.',
+)]
 class StatusCommand extends AbstractCommand
 {
     const STATUS_INVALID = -1;
 
     protected static $defaultName = 'kaliop:migration:status';
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
-            ->setDescription('View the status of all (or a set of) migrations.')
             ->addOption('path', null, InputOption::VALUE_OPTIONAL | InputOption::VALUE_IS_ARRAY, "The directory or file to load the migration definitions from")
             ->addOption('sort-by', null, InputOption::VALUE_REQUIRED, "Supported sorting order: name, execution", 'name')
             ->addOption('summary', null, InputOption::VALUE_NONE, "Only print summary information")
@@ -42,7 +47,7 @@ EOT
             );
     }
 
-    public function execute(InputInterface $input, OutputInterface $output)
+    public function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->setOutput($output);
         $this->setVerbosity($output->getVerbosity());
@@ -56,7 +61,7 @@ EOT
 
         if (!count($migrationDefinitions) && !count($migrations)) {
             $output->writeln('<info>No migrations found</info>');
-            return 0;
+            return Command::SUCCESS;
         }
 
         // create a unique list of all migrations (coming from db) and definitions (coming from disk)
@@ -235,7 +240,7 @@ EOT
             foreach ($data as $migrationData) {
                 $output->writeln("$migrationData", OutputInterface::OUTPUT_RAW|OutputInterface::VERBOSITY_QUIET);
             }
-            return 0;
+            return Command::SUCCESS;
         }
 
         if ($input->getOption('summary')) {
@@ -254,7 +259,7 @@ EOT
             ->setRows($data);
         $table->render();
 
-        return 0;
+        return Command::SUCCESS;
     }
 
     /**

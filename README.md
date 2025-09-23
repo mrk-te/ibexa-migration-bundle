@@ -1,35 +1,37 @@
-Ibexa-Migration-Bundle for Ibexa 4
+Ibexa-Migration-Bundle for Ibexa 5
 ==================================
 
-**This version includes the support of the `ezimageasset` for Ibexa 4.**
+This is an upgrade of [tanoconsulting/ibexa-migration-bundle](https://github.com/tanoconsulting/ibexa-migration-bundle for Ibexa 5.
 
-The replacement of [kaliop/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle) for Ibexa 4.
+Version `^2.0` adds support for Ibexa 5.
+
+Version `1.0.6` includes the support of the `ezimageasset` field type for Ibexa 4.
 
 This bundle makes it easy to programmatically deploy changes to Ibexa database structure and contents.
 
 It is inspired by the [DoctrineMigrationsBundle](http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html)
 
+Originally developped as [kaliop/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle)
+
 *Many thanks to [Wizhippo](https://github.com/wizhippo) for having started this version, and kindly donated the code!*
 
 ## Requirements
 
-* PHP 7.4 or later.
+* PHP 8.3
+* Ibexa 5.0 (aka. Ibexa DXP).
 
-* Ibexa 4.0 (aka. Ibexa DXP).
+Following versions are available:
 
-For Ibexa DXP 3, head on to [tanoconsulting/ezmigrationbundle2](https://github.com/tanoconsulting/ezmigrationbundle2). For eZPlatform 1-2 and earlier, to
-[kaliop-uk/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle).
+* For Ibexa 4, head on to [tanoconsulting/ibexa-migration-bundle](https://github.com/tanoconsulting/ibexa-migration-bundle).
+* For Ibexa 3, head on to [tanoconsulting/ezmigrationbundle2](https://github.com/tanoconsulting/ezmigrationbundle2).
+* For eZPlatform 1-2 and earlier, to [kaliop-uk/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle).
 
 
 ## Installation
 
-In either `require` or `require-dev` at the end of the bundle list in the composer.json file add:
+Run :
 
-    composer require 'tanoconsulting/ibexa-migration-bundle:^1.0'
-
-Save it and run
-
-    composer update --dev tanoconsulting/ibexa-migration-bundle
+    composer require 'mrk-te/ibexa-migration-bundle2:^2.0'
 
 This will install the bundle and all its dependencies.
 
@@ -53,7 +55,7 @@ This indicates that the bundle has been installed and registered correctly.
 
 To get the latest version, you can update the bundle to the latest available version by using `composer`
 
-    composer update tanoconsulting/ibexa-migration-bundle
+    composer update mrk-te/ibexa-migration-bundle2
 
 For upgrades from kaliop/ezmigrationbundle, see the instructions in [ezmigrationbundle_to_ibexamigrationbundle.md](Resources/doc/Upgrading/ezmigrationbundle_to_ibexamigrationbundle.md).
 
@@ -88,7 +90,7 @@ status command in your eZPlatform root directory:
 
 The list of migrations which have been already applied is stored in the database, in a table named `kaliop_migrations`.
 The bundle will automatically create the table if needed.
-In case you need to use a different name for that table, you can change the Symfony parameter `ez_migration_bundle.table_name`.
+In case you need to use a different name for that table, you can change the Symfony parameter `ibexa_migration_bundle.table_name`.
 
 ### Applying migrations
 
@@ -248,28 +250,28 @@ action executors - is to use Event Listeners.
 
 Two events are fired *for each step* during execution of migrations:
 
-    * ez_migration.before_execution => listeners receive a BeforeStepExecutionEvent event instance
-    * ez_migration.step_executed => listeners receive a StepExecutedEvent event instance
+    * ibexa_migration.before_execution => listeners receive a BeforeStepExecutionEvent event instance
+    * ibexa_migration.step_executed => listeners receive a StepExecutedEvent event instance
 
 An event is fired only in case a migration fails because a step throws a specific migration abort exception:
 
-    * ez_migration.migration_aborted => listeners receive a MigrationAbortedEvent event instance
+    * ibexa_migration.migration_aborted => listeners receive a MigrationAbortedEvent event instance
 
 An event is fired when a migration is being generated using the `kaliop:migration:generate` command, allowing to alter
 the data that will be serialized as migration steps:
 
-    * ez_migration.migration_generated => listeners receive a MigrationGeneratedEvent event instance
+    * ibexa_migration.migration_generated => listeners receive a MigrationGeneratedEvent event instance
 
 In order to act on those events, you will need to declare tagged services, such as for ex:
 
     my.step_executed_listener:
         class: my\helper\StepExecutedListener
         tags:
-            - { name: kernel.event_listener, event: ez_migration.step_executed, method: onStepExecuted }
+            - { name: kernel.event_listener, event: ibexa_migration.step_executed, method: onStepExecuted }
 
 and the corresponding php class:
 
-    use Kaliop\eZMigrationBundle\API\Event\StepExecutedEvent;
+    use Kaliop\IbexaMigrationBundle\API\Event\StepExecutedEvent;
 
     class StepExecutedListener
     {
@@ -301,7 +303,7 @@ Event Subscribers are supported as an alternative to Event Listeners, as is stan
     - and/or configuring Solr to always commit changes to the index immediately (eg. disable `commitwithin`)
 
 * when using SOLR in multi-core configurations and getting a `java.lang.NegativeArraySizeException` error, you will have
-  to set a lower value than the default 2147483647 for parameter `ez_migration_bundle.query_limit`
+  to set a lower value than the default 2147483647 for parameter `ibexa_migration_bundle.query_limit`
 
 * if you get fatal errors without any error message when running a migration which involves a lot of content changes,
   such as f.e. altering a contentType with many contents, it might be that you are running out of memory for your
@@ -416,7 +418,7 @@ To run the tests:
     export KERNEL_CLASS=App\Kernel (or whatever you renamed it to)
     export APP_ENV=behat (or whatever your environment is)
 
-    bin/phpunit --stderr -c vendor/tanoconsulting/ibexa-migration-bundle/phpunit.xml.dist
+    bin/phpunit --stderr -c vendor/mrk-te/ibexa-migration-bundle2/phpunit.xml.dist
 
 *NB* the tests do *not* mock interaction with the database, but create/modify/delete many types of data in it.
 As such, there are good chances that running tests will leave stale/broken data.
@@ -519,9 +521,6 @@ this is not always possible.
   functionality) and be documented in the NEWS file
 
 
-[![License](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/license)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-[![Latest Stable Version](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/v/stable)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-[![Total Downloads](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/downloads)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-
-[![Build Status](https://github.com/tanoconsulting/ibexa-migration-bundle/actions/workflows/ci.yaml/badge.svg)](https://github.com/tanoconsulting/ibexa-migration-bundle/actions/workflows/ci.yaml)
-[![Code Coverage](https://codecov.io/gh/tanoconsulting/ibexa-migration-bundle/branch/main/graph/badge.svg)](https://codecov.io/gh/tanoconsulting/ibexa-migration-bundle/tree/main)
+[![License](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/license)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)
+[![Latest Stable Version](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/v/stable)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)
+[![Total Downloads](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/downloads)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)

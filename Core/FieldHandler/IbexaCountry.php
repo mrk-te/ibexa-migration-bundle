@@ -1,13 +1,13 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Contracts\Core\Repository\ContentTypeService;
 use Ibexa\Contracts\Core\Repository\FieldTypeService;
 use Ibexa\Core\FieldType\Country\Value as CountryValue;
-use Kaliop\eZMigrationBundle\API\FieldValueImporterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueImporterInterface;
 
-class EzCountry extends AbstractFieldHandler implements FieldValueImporterInterface
+class IbexaCountry extends AbstractFieldHandler implements FieldValueImporterInterface
 {
     private $contentTypeService;
 

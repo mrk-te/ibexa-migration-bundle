@@ -6,13 +6,13 @@
     content_type_group: 1
     identifier: kmb_test_005
     name: Kaliop Migration Bundle Test Class 3
-    name_pattern: '<ezstring>'
+    name_pattern: '<ibexa_string>'
     is_container: true
     attributes:
         -
-            type: ezstring
-            name: ezstring
-            identifier: ezstring
+            type: ibexa_string
+            name: ibexa_string
+            identifier: ibexa_string
     references:
         -
             identifier: kmb_test_005
@@ -27,7 +27,7 @@
     content_type: reference:kmb_test_005
     parent_location: 2
     attributes:
-        - ezstring: hello world 1
+        - ibexa_string: hello world 1
     references:
         -
             identifier: kmb_test_005_1_loc
@@ -39,7 +39,7 @@
     content_type: reference:kmb_test_005
     parent_location: 2
     attributes:
-        - ezstring: hello world 2
+        - ibexa_string: hello world 2
     references:
         -
             identifier: kmb_test_005_2_loc
@@ -51,7 +51,7 @@
     content_type: reference:kmb_test_005
     parent_location: 2
     attributes:
-        - ezstring: hello world 3
+        - ibexa_string: hello world 3
     references:
         -
             identifier: kmb_test_005_3
@@ -66,7 +66,7 @@
     content_type: reference:kmb_test_005
     parent_location: 2
     attributes:
-        - ezstring: hello world 4
+        - ibexa_string: hello world 4
     references:
         -
             identifier: kmb_test_005_4
@@ -87,7 +87,7 @@
     parent_location: 2
     location_remote_id: one_more_random_remoteid_location
     attributes:
-        - ezstring: hello world 5
+        - ibexa_string: hello world 5
 
 -
     type: content
@@ -96,7 +96,7 @@
     parent_location: one_more_random_remoteid_location
     remote_id: one_more_random_remoteid_content
     attributes:
-        - ezstring: hello world 6
+        - ibexa_string: hello world 6
 
 -
     type: location

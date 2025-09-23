@@ -1,8 +1,8 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\API\Exception;
+namespace Kaliop\IbexaMigrationBundle\API\Exception;
 
-use Kaliop\eZMigrationBundle\API\Value\Migration;
+use Kaliop\IbexaMigrationBundle\API\Value\Migration;
 
 /**
  * Throw this exception in any step to abort the migration and mark it as finished in either DONE or SKIPPED status

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
 use Ibexa\Contracts\Core\Repository\Exceptions\NotFoundException;
 use Ibexa\Contracts\Core\Repository\PermissionResolver;
 use Ibexa\Contracts\Core\Repository\UserService;
 use Ibexa\Contracts\Core\Repository\Values\User\UserReference;
-use Kaliop\eZMigrationBundle\API\Exception\InvalidUserAccountException;
+use Kaliop\IbexaMigrationBundle\API\Exception\InvalidUserAccountException;
 
 trait AuthenticatedUserSetterTrait
 {

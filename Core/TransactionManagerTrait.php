@@ -2,11 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Kaliop\eZMigrationBundle\Core;
+namespace Kaliop\IbexaMigrationBundle\Core;
 
 use Doctrine\DBAL\Connection;
 use Ibexa\Contracts\Core\Repository\Repository;
-use ProxyManager\Proxy\ValueHolderInterface;
 
 /**
  * Functionality related to managing transactions - both "repo transactions" and "db transactions"
@@ -71,8 +70,13 @@ trait TransactionManagerTrait
      */
     protected function resetDBTransaction()
     {
-        /** @var Connection $connection */
-        $connection = ($this->connection instanceof ValueHolderInterface) ? $this->connection->getWrappedValueHolderValue() : $this->connection;
+        $connection = $this->connection;
+        if (interface_exists('ProxyManager\Proxy\ValueHolderInterface') && $connection instanceof \ProxyManager\Proxy\ValueHolderInterface) {
+            $connection = $connection->getWrappedValueHolderValue();
+        } elseif (interface_exists('Symfony\Component\VarExporter\LazyObjectInterface') && $connection instanceof \Symfony\Component\VarExporter\LazyObjectInterface) {
+            $connection = $connection->initializeLazyObject();
+        }
+
         $cl = \Closure::bind(function () {
                 $this->transactionNestingLevel = 0;
                 $this->isRollbackOnly = false;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\Core\FieldHandler;
+namespace Kaliop\IbexaMigrationBundle\Core\FieldHandler;
 
 use Ibexa\Core\FieldType\Media\Value as MediaValue;
-use Kaliop\eZMigrationBundle\API\FieldValueConverterInterface;
+use Kaliop\IbexaMigrationBundle\API\FieldValueConverterInterface;
 
-class EzMedia extends FileFieldHandler implements FieldValueConverterInterface
+class IbexaMedia extends FileFieldHandler implements FieldValueConverterInterface
 {
     /**
      * Creates a value object to use as the field value when setting a media field type.

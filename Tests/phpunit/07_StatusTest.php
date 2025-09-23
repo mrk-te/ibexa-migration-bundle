@@ -10,14 +10,14 @@ class StatusTest extends MigrationExecutingTest
     public function testSummary()
     {
         $output = $this->runCommand('kaliop:migration:status', array('--summary' => true));
-        $this->assertRegexp('?\| Invalid +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| To do +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Started +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Started +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Done +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Suspended +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Failed +\| \d+ +\|?', $output);
-        $this->assertRegexp('?\| Skipped +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Invalid +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| To do +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Started +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Started +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Done +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Suspended +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Failed +\| \d+ +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| Skipped +\| \d+ +\|?', $output);
     }
 
     // Tests issue #190
@@ -31,17 +31,17 @@ class StatusTest extends MigrationExecutingTest
 
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath2), '-n' => true, '-u' => true));
         // check that there are no notes related to adding the migration before execution
-        $this->assertRegexp('?\| ' . basename($filePath2) . ' +\| +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath2) . ' +\| +\|?', $output);
         sleep(1);
         $output = $this->runCommand('kaliop:migration:migrate', array('--path' => array($filePath1), '-n' => true, '-u' => true));
         // check that there are no notes related to adding the migration before execution
-        $this->assertRegexp('?\| ' . basename($filePath1) . ' +\| +\|?', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath1) . ' +\| +\|?', $output);
 
         $output = $this->runCommand('kaliop:migration:status');
-        $this->assertRegexp('?\| ' . basename($filePath1) . ' +\| executed +\|.+\| ' . basename($filePath2) . ' +\| executed +\|?s', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath1) . ' +\| executed +\|.+\| ' . basename($filePath2) . ' +\| executed +\|?s', $output);
 
         $output = $this->runCommand('kaliop:migration:status', array('--sort-by' => 'execution'));
-        $this->assertRegexp('?\| ' . basename($filePath2) . ' +\| executed +\|.+\| ' . basename($filePath1) . ' +\| executed +\|?s', $output);
+        $this->assertMatchesRegularExpression('?\| ' . basename($filePath2) . ' +\| executed +\|.+\| ' . basename($filePath1) . ' +\| executed +\|?s', $output);
 
         $this->deleteMigration($filePath1);
         $this->deleteMigration($filePath2);
@@ -52,7 +52,7 @@ class StatusTest extends MigrationExecutingTest
         $filePath = realpath($this->dslDir.'/misc/UnitTestOK701_harmless.yml');
         $this->prepareMigration($filePath);
         $output = $this->runCommand('kaliop:migration:status', array('--todo' => true));
-        $this->assertRegexp('?^'.$filePath.'$?m', $output);
+        $this->assertMatchesRegularExpression('?^'.$filePath.'$?m', $output);
 
         $this->deleteMigration($filePath);
     }

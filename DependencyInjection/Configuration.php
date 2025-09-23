@@ -1,6 +1,6 @@
 <?php
 
-namespace Kaliop\eZMigrationBundle\DependencyInjection;
+namespace Kaliop\IbexaMigrationBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -15,9 +15,9 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritDoc}
      */
-    public function getConfigTreeBuilder()
+    public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('ez_migration_bundle', 'array');
+        $treeBuilder = new TreeBuilder('ibexa_migration_bundle', 'array');
         $rootNode = $treeBuilder->getRootNode();
 
         // Here you should define the parameters that are allowed to
