@@ -1,3 +1,9 @@
+Version: 1.0.6
+==============
+
+* Added: support to import `ezimageasset` field type
+
+
 Version: 1.0.5
 ==============
 

@@ -120,6 +120,7 @@ parameters:
     ez_migration_bundle.complex_field.ezselection.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzSelection
     ez_migration_bundle.complex_field.ezxmltext.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzXmlText
     ez_migration_bundle.complex_field.eztags.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzTags
+    ez_migration_bundle.complex_field.ezimageasset.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzImageAsset
 
     ez_migration_bundle.reference_resolver.chain.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ChainResolver
     ez_migration_bundle.reference_resolver.chain_prefix.class: Kaliop\eZMigrationBundle\Core\ReferenceResolver\ChainPrefixResolver
@@ -800,6 +801,14 @@ services:
             - '@ez_migration_bundle.tag_matcher'
         tags:
             - { name: ez_migration_bundle.complex_field, fieldtype: eztags, priority: 0 }
+
+    ez_migration_bundle.complex_field.ezimageasset:
+        parent: ez_migration_bundle.complex_field
+        class: '%ez_migration_bundle.complex_field.ezimageasset.class%'
+        arguments:
+            - '@ez_migration_bundle.content_matcher'
+        tags:
+            - { name: ez_migration_bundle.complex_field, fieldtype: ezimageasset, priority: 0 }
 
     ### reference resolvers
 
