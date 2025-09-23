@@ -1,5 +1,7 @@
-TanoConsulting Ibexa-Migration-Bundle
-=====================================
+Ibexa-Migration-Bundle for Ibexa 4
+==================================
+
+**This version includes the support of the `ezimageasset` for Ibexa 4.**
 
 The replacement of [kaliop/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle) for Ibexa 4.
 

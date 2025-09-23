@@ -1,5 +1,5 @@
 {
-    "name": "tanoconsulting/ibexa-migration-bundle",
+    "name": "mrk-te/ibexa-migration-bundle2",
     "type": "symfony-bundle",
     "description": "The port of Kaliop eZ-Migration Bundle to Ibexa 4",
     "keywords": ["migrations", "database", "ibexa"],
@@ -18,6 +18,11 @@
         {
             "name": "Peter Halasz",
             "role": "Original author"
+        },
+        {
+            "name": "Marc Teinturier",
+            "email": "m@m-te.fr",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -40,7 +45,8 @@
     },
     "conflict": {
         "kaliop/ezmigrationbundle": "*",
-        "tanoconsulting/ezmigrationbundle2": "*"
+        "tanoconsulting/ezmigrationbundle2": "*",
+        "tanoconsulting/ibexa-migration-bundle": "*"
     },
     "suggest": {
         "php-http/httplug-bundle": "Required for usage of HTTP/CALL migration steps"
