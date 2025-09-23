@@ -117,9 +117,9 @@ parameters:
     ibexa_migration_bundle.complex_field.ezrelationlist.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaRelationList
     ibexa_migration_bundle.complex_field.ibexa_richtext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaRichText
     ibexa_migration_bundle.complex_field.ibexa_selection.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaSelection
+    ibexa_migration_bundle.complex_field.ibexa_image_asset.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaImageAsset
     ibexa_migration_bundle.complex_field.ezxmltext.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaXmlText
     ibexa_migration_bundle.complex_field.eztags.class: Kaliop\IbexaMigrationBundle\Core\FieldHandler\IbexaTags
-    ibexa_migration_bundle.complex_field.ezimageasset.class: Kaliop\eZMigrationBundle\Core\FieldHandler\EzImageAsset
 
     ibexa_migration_bundle.reference_resolver.chain.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ChainResolver
     ibexa_migration_bundle.reference_resolver.chain_prefix.class: Kaliop\IbexaMigrationBundle\Core\ReferenceResolver\ChainPrefixResolver
@@ -791,13 +791,13 @@ services:
         tags:
             - { name: ibexa_migration_bundle.complex_field, fieldtype: eztags, priority: 0 }
 
-    ez_migration_bundle.complex_field.ezimageasset:
-        parent: ez_migration_bundle.complex_field
-        class: '%ez_migration_bundle.complex_field.ezimageasset.class%'
+    ibexa_migration_bundle.complex_field.ibexa_image_asset:
+        parent: ibexa_migration_bundle.complex_field
+        class: '%ibexa_migration_bundle.complex_field.ibexa_image_asset.class%'
         arguments:
-            - '@ez_migration_bundle.content_matcher'
+            - '@ibexa_migration_bundle.content_matcher'
         tags:
-            - { name: ez_migration_bundle.complex_field, fieldtype: ezimageasset, priority: 0 }
+            - { name: ibexa_migration_bundle.complex_field, fieldtype: ibexa_image_asset, priority: 0 }
 
     ### reference resolvers
 
