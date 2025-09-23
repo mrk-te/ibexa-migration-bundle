@@ -1,35 +1,37 @@
-Ibexa-Migration-Bundle for Ibexa 4
+Ibexa-Migration-Bundle for Ibexa 5
 ==================================
 
-**This version includes the support of the `ezimageasset` for Ibexa 4.**
+This is an upgrade of [tanoconsulting/ibexa-migration-bundle](https://github.com/tanoconsulting/ibexa-migration-bundle for Ibexa 5.
 
-The replacement of [kaliop/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle) for Ibexa 4.
+Version `^2.0` adds support for Ibexa 5.
+
+Version `1.0.6` includes the support of the `ezimageasset` field type for Ibexa 4.
 
 This bundle makes it easy to programmatically deploy changes to Ibexa database structure and contents.
 
 It is inspired by the [DoctrineMigrationsBundle](http://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html)
 
+Originally developped as [kaliop/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle)
+
 *Many thanks to [Wizhippo](https://github.com/wizhippo) for having started this version, and kindly donated the code!*
 
 ## Requirements
 
-* PHP 7.4 or later.
+* PHP 8.3
+* Ibexa 5.0 (aka. Ibexa DXP).
 
-* Ibexa 4.0 (aka. Ibexa DXP).
+Following versions are available:
 
-For Ibexa DXP 3, head on to [tanoconsulting/ezmigrationbundle2](https://github.com/tanoconsulting/ezmigrationbundle2). For eZPlatform 1-2 and earlier, to
-[kaliop-uk/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle).
+* For Ibexa 4, head on to [tanoconsulting/ibexa-migration-bundle](https://github.com/tanoconsulting/ibexa-migration-bundle).
+* For Ibexa 3, head on to [tanoconsulting/ezmigrationbundle2](https://github.com/tanoconsulting/ezmigrationbundle2).
+* For eZPlatform 1-2 and earlier, to [kaliop-uk/ezmigrationbundle](https://github.com/kaliop-uk/ezmigrationbundle).
 
 
 ## Installation
 
-In either `require` or `require-dev` at the end of the bundle list in the composer.json file add:
+Run :
 
-    composer require 'tanoconsulting/ibexa-migration-bundle:^1.0'
-
-Save it and run
-
-    composer update --dev tanoconsulting/ibexa-migration-bundle
+    composer require 'mrk-te/ibexa-migration-bundle2:^2.0'
 
 This will install the bundle and all its dependencies.
 
@@ -53,7 +55,7 @@ This indicates that the bundle has been installed and registered correctly.
 
 To get the latest version, you can update the bundle to the latest available version by using `composer`
 
-    composer update tanoconsulting/ibexa-migration-bundle
+    composer update mrk-te/ibexa-migration-bundle2
 
 For upgrades from kaliop/ezmigrationbundle, see the instructions in [ezmigrationbundle_to_ibexamigrationbundle.md](Resources/doc/Upgrading/ezmigrationbundle_to_ibexamigrationbundle.md).
 
@@ -416,7 +418,7 @@ To run the tests:
     export KERNEL_CLASS=App\Kernel (or whatever you renamed it to)
     export APP_ENV=behat (or whatever your environment is)
 
-    bin/phpunit --stderr -c vendor/tanoconsulting/ibexa-migration-bundle/phpunit.xml.dist
+    bin/phpunit --stderr -c vendor/mrk-te/ibexa-migration-bundle2/phpunit.xml.dist
 
 *NB* the tests do *not* mock interaction with the database, but create/modify/delete many types of data in it.
 As such, there are good chances that running tests will leave stale/broken data.
@@ -519,9 +521,6 @@ this is not always possible.
   functionality) and be documented in the NEWS file
 
 
-[![License](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/license)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-[![Latest Stable Version](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/v/stable)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-[![Total Downloads](https://poser.pugx.org/tanoconsulting/ibexa-migration-bundle/downloads)](https://packagist.org/packages/tanoconsulting/ibexa-migration-bundle)
-
-[![Build Status](https://github.com/tanoconsulting/ibexa-migration-bundle/actions/workflows/ci.yaml/badge.svg)](https://github.com/tanoconsulting/ibexa-migration-bundle/actions/workflows/ci.yaml)
-[![Code Coverage](https://codecov.io/gh/tanoconsulting/ibexa-migration-bundle/branch/main/graph/badge.svg)](https://codecov.io/gh/tanoconsulting/ibexa-migration-bundle/tree/main)
+[![License](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/license)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)
+[![Latest Stable Version](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/v/stable)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)
+[![Total Downloads](https://poser.pugx.org/mrk-te/ibexa-migration-bundle2/downloads)](https://packagist.org/packages/mrk-te/ibexa-migration-bundle2)

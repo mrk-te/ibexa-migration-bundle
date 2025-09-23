@@ -1,7 +1,7 @@
 {
     "name": "mrk-te/ibexa-migration-bundle2",
     "type": "symfony-bundle",
-    "description": "The port of Kaliop eZ-Migration Bundle to Ibexa 4",
+    "description": "The port of Kaliop eZ-Migration Bundle to Ibexa 5",
     "keywords": ["migrations", "database", "ibexa"],
     "license": "GPL-2.0",
     "authors": [
@@ -61,11 +61,5 @@
             "symfony/runtime": true,
             "symfony/thanks": true
         }
-    },
-    "funding": [
-        {
-            "type": "github",
-            "url": "https://github.com/sponsors/tanoconsulting"
-        }
-    ]
+    }
 }
